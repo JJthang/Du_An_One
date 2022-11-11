@@ -23,6 +23,14 @@
                 }
                 include "danhmuc/danhmuc_update.php";
                 break;
+            case 'xoadm':
+                     if (isset($_GET['id_danhmuc']) && ($_GET['id_danhmuc'])) {
+                            delete_danhmuc($_GET['id_danhmuc']);
+                     }
+                     $sql = " select * from danhmuc order by id_danhmuc";
+                     $xuatDM = pdo_query($sql);
+                     include "danhmuc/danhmuc_list.php";
+                break;
             case 'updatedm':
                       if (isset($_POST['capnhat'])&&($_POST['capnhat'])) {
                         $id_danhmuc = $_POST['id'];
