@@ -48,8 +48,8 @@
            </div>
             <div class="chucnang">
             <input type="submit" name="themmoi" id="" value="Thêm mới" >
-                <a href="index.php?act=listdm" style="padding-left: 10px;">
-                    <input type="button"  id="" value="Danh sách">
+                <a href="index.php?act=listsp" style="padding-left: 10px;">
+                    <input type="button" id="" value="Danh sách">
                 </a>
             </div>
         </form>

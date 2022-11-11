@@ -24,6 +24,9 @@
     width: 1250px;
     height: 500px;
 }
+.khung_danhsach h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .form{
     width: 1250px;
     height: 50px;
@@ -65,4 +68,16 @@
 .chucnang{
     width: 100%;
     height: 60px;
+}
+.khung_list_title{
+    width: 100%;
+    height: 70px;
+}
+.khung_list_sp{
+    width: 100%;
+    height: 800px;
+}
+.import_more{
+    width: 100%;
+    height: 50px;
 }

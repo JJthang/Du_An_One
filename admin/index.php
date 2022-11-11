@@ -65,6 +65,20 @@
                 $listDM = load_danh_all();
                 include "sanpham/sanpham_add.php";
                 break;
+            
+            case 'listsp':
+                if (isset($_POST['list_find'])&&($_POST['list_find'])) {
+                    $kyw = $_POST['timkiem'];
+                    $id_danhmuc = $_POST['id_danhmuc'];
+               }
+               else{
+                    $kyw = '';
+                    $id_danhmuc = 0;
+               }
+                $listsanpham = load_sanpham($kyw, $id_danhmuc);
+                $listDM = load_danh_all();
+                include "sanpham/sanpham_list.php";
+                break;
             default:
                 include "home.php";
                 break;

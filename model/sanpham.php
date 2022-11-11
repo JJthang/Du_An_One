@@ -26,12 +26,12 @@
     {
         $sql = "select * from sanpham where 1";
         if ($kyw!="") {
-            $sql .= " and name like '%".$kyw."%'";
+            $sql .= " and name_sp like '%".$kyw."%'";
         }
         if ($id_danhmuc > 0) {
             $sql .= " and id_danhmuc = '".$id_danhmuc."'"; 
         }
-        $sql .= " order by id desc";
+        $sql .= " order by id_sp desc";
         $listsanpham= pdo_query($sql);
         return $listsanpham;
     }
