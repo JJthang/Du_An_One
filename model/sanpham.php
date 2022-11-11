@@ -1,8 +1,8 @@
 <?php 
 
-    function insert_sanpham($name,$price,$img,$mota,$id_danhmuc)
+    function insert_sanpham($name,$img,$price,$mota,$id_danhmuc)
     {
-        $sql = "INSERT into sanpham(name,price,img,mota,id_danhmuc) values('$name','$price','$img','$mota','$id_danhmuc')";
+        $sql = "INSERT into sanpham(name_sp,img_sp,price_sp,mota_sp,id_danhmuc) values('$name','$img','$price','$mota','$id_danhmuc')";
         pdo_execute($sql);
     }
     function delete_sanpham($id)
