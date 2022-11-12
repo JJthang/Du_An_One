@@ -7,7 +7,7 @@
     }
     function delete_sanpham($id)
     {
-        $sql = "DELETE from sanpham where id = ".$id;
+        $sql = "DELETE from sanpham where id_sp = ".$id;
         pdo_query($sql);
     }
     function load_sp_top6()
@@ -38,7 +38,7 @@
     function load_one_sanpham($id)
     {
         if ($id >0) {
-            $sql = "SELECT * from sanpham where id=". $id;
+            $sql = "SELECT * from sanpham where id_sp =". $id;
             $sp = pdo_query_one($sql); 
             return $sp;
         }else{
@@ -51,13 +51,13 @@
         $listsanpham= pdo_query($sql);
         return $listsanpham;
     }
-    function update_sanpham($id, $name, $price, $img,$mota, $id_danhmuc)
+    function update_sanpham($id, $name, $img, $price,$mota, $id_danhmuc)
     {
         if ($img !="") {
-            $sql = "UPDATE sanpham set id_danhmuc = '". $id_danhmuc ."', name = '".$name."', price ='".$price."', img = '".$img."'  , mota = '".$mota."' where id=".$id;
+            $sql = "UPDATE sanpham set id_danhmuc = '". $id_danhmuc ."', name_sp = '".$name."', img_sp = '".$img."', price_sp ='".$price."', mota_sp = '".$mota."' where id_sp=".$id;
             pdo_execute($sql);
         }else{
-            $sql = "UPDATE sanpham set id_danhmuc = '". $id_danhmuc ."', name = '".$name."', price = '".$price."' , mota = '".$mota."' where id=".$id;
+            $sql = "UPDATE sanpham set id_danhmuc = '". $id_danhmuc ."', name_sp = '".$name."', price_sp = '".$price."' , mota_sp = '".$mota."' where id_sp=".$id;
             pdo_execute($sql);
         }
     }

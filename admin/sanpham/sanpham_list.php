@@ -9,8 +9,8 @@
             <div class="find_sp" style="width: 100%; height: 40px;">
                     <form action="index.php?act=listsp" method="post">
                                 <input type="text" name="timkiem" class="find_product">
-                                <select name="id_danhmuc" id="">
-                                    <option value="0" selected>Tất cả</option>
+                                <select name="id_danhmuc" id="" class="option">
+                                    <option value="0" selected>Tất cả</option >
                                             <?php 
                                                  foreach ($listDM as $key) {
                                                     extract($key);

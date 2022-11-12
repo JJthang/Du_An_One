@@ -79,6 +79,45 @@
                 $listDM = load_danh_all();
                 include "sanpham/sanpham_list.php";
                 break;
+            
+            case 'xoasp':
+                if (isset($_GET['id_sp']) && ($_GET['id_sp'] > 0)) {
+                    delete_sanpham($_GET['id_sp']);
+                }
+                $listsanpham = load_sanpham("", 0);
+                include "sanpham/sanpham_list.php";
+                break;
+
+            case 'suasp':
+                if (isset($_GET['id_sp']) && ($_GET['id_sp'] >0)) {
+                    $sanpham = load_one_sanpham($_GET['id_sp']);    
+                }
+                    $listDM = load_danh_all();
+                    include "sanpham/sanpham_update.php";
+                break;
+
+            case 'updatesp':
+                if (isset($_POST['capnhat'])&&($_POST['capnhat'])) {
+                    $id_sp = $_POST['id_sp'];
+                    $id_danhmuc = $_POST['id_danhmuc'];
+                    $name_sp = $_POST['name_sp'];
+                    $price_sp = $_POST['price_sp'];
+                    $mota_sp = $_POST['mota_sp'];
+                    $img_sp = $_FILES['img_sp']['name'];
+                    $taget_div = "../upload/";
+                    $taget_file = $taget_div . basename($_FILES['img_sp']['name']);
+                    if (move_uploaded_file($_FILES['img_sp']['tmp_name'],$taget_file)) {
+                         //echo "chill";
+                    }else{
+                         //echo "chill";
+                    }
+                    update_sanpham($id_sp, $name_sp, $img_sp, $price_sp,$mota_sp, $id_danhmuc);
+                    $thongbao = "Cập nhật thành công";
+               }
+               $listDM = load_danh_all();
+               $listsanpham = load_sanpham("", 0);
+               include "sanpham/sanpham_list.php";
+               break;
             default:
                 include "home.php";
                 break;
