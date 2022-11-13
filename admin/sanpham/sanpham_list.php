@@ -23,7 +23,7 @@
             </div>
 
             <div class="xuatsp" style="width: 100%; height: 800px;">
-            <table border="1px" style="width: 100%; height: 30%; text-align: center;">
+            <table border="1px" style="width: 100%; height: 60%; text-align: center;">
                         <tr >
                             <th></th>
                             <th>MÃ SẢN PHẨM</th>

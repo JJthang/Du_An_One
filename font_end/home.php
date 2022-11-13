@@ -136,19 +136,25 @@
                     <div class="tab-content" id="productContent">
                         <div class="tab-pane fade show active" id="new-products" role="tabpanel">
                             <div class="products-wrapper">
-                                <div class="product-carousel owl-carousel">
+                                <div class="product-carousel owl-carousel" >
                                     <!-- Single Product Start -->
-                                    <div class="single-product-item">
+                                    <?php 
+                                         foreach ($spnew as $key) {
+                                            extract($key);
+                                            $hinh = "upload/".$img_sp;
+                                            $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                            echo '
+                                            <div class="single-product-item">
                                         <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets_fontend/img/product-1.jpg"
-                                                                               alt="Product"></a>
+                                            <a href="'. $linksp .'">
+                                                <img style="width: 100%; height: 200px;" src="'. $hinh .'"
+                                            alt="Product" ></a>
                                             <a href="#" class="btn btn-round btn-cart" title="Quick View"
                                                data-bs-toggle="modal" data-bs-target="#quickView"><i
                                                     class="fa fa-eye"></i></a>
                                         </figure>
                                         <div class="product-details">
-                                            <h2 class="product-title"><a href="single-product.html">Rival Field
-                                                Messenger</a></h2>
+                                            <h2 class="product-title"><a href="single-product.html">' . $name_sp . '</a></h2>
                                             <div class="rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
@@ -156,7 +162,7 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                             </div>
-                                            <span class="product-price">$40.99</span>
+                                            <span class="product-price">' . $price_sp . '</span>
 
                                             <div class="product-meta">
                                                 <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
@@ -168,11 +174,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                            ';
+                                         }
+                                    ?>
                                     <!-- Single Product End -->
 
                                     <!-- Single Product Start -->
-                                    <div class="single-product-item">
-                                        <figure class="product-thumb">
+                                    <!-- <div class="single-product-item"> -->
+                                        <!-- <figure class="product-thumb">
                                             <a href="single-product.html"><img src="assets_fontend/img/product-2.jpg"
                                                                                alt="Product"></a>
                                             <a href="#" class="btn btn-round btn-cart" title="Quick View"
@@ -200,19 +209,19 @@
                                                    title="Add to Compare"><i class="fa fa-exchange"></i></a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Single Product End -->
 
                                     <!-- Single Product Start -->
-                                    <div class="single-product-item">
-                                        <figure class="product-thumb">
+                                    <!-- <div class="single-product-item"> -->
+                                        <!-- <figure class="product-thumb">
                                             <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
                                                                                alt="Product"></a>
                                             <a href="#" class="btn btn-round btn-cart" title="Quick View"
                                                data-bs-toggle="modal" data-bs-target="#quickView"><i
                                                     class="fa fa-eye"></i></a>
-                                        </figure>
-                                        <div class="product-details">
+                                        </figure> -->
+                                        <!-- <div class="product-details">
                                             <h2 class="product-title"><a href="single-product.html">Voyage Yoga Bag</a>
                                             </h2>
                                             <div class="rating">
@@ -222,7 +231,7 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                             </div>
-                                            <span class="product-price">$40.99</span>
+                                            <span class="product-price">$11111</span>
 
                                             <div class="product-meta">
                                                 <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
@@ -232,13 +241,13 @@
                                                 <a href="compare.html" class="btn btn-round btn-cart"
                                                    title="Add to Compare"><i class="fa fa-exchange"></i></a>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </div> -->
+                                    <!-- </div> -->
                                     <!-- Single Product End -->
 
                                     <!-- Single Product Start -->
-                                    <div class="single-product-item">
-                                        <figure class="product-thumb">
+                                    <!-- <div class="single-product-item"> -->
+                                        <!-- <figure class="product-thumb">
                                             <a href="single-product.html"><img src="assets_fontend/img/product-4.jpg"
                                                                                alt="Product"></a>
                                             <a href="#" class="btn btn-round btn-cart" title="Quick View"
@@ -266,21 +275,22 @@
                                                    title="Add to Compare"><i class="fa fa-exchange"></i></a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Single Product End -->
 
                                     <!-- Single Product Start -->
-                                    <div class="single-product-item">
-                                        <figure class="product-thumb">
-                                            <a href="single-product.html"><img src="assets_fontend/img/product-5.jpg"
+                                    <!-- <div class="single-product-item"> -->
+                                        <!-- <figure class="product-thumb">
+                                            <a href="single-product.html">
+                                                <img src="assets_fontend/img/product-5.jpg"
                                                                                alt="Product"></a>
                                             <a href="#" class="btn btn-round btn-cart" title="Quick View"
                                                data-bs-toggle="modal" data-bs-target="#quickView"><i
                                                     class="fa fa-eye"></i></a>
-                                        </figure>
-                                        <div class="product-details">
-                                            <h2 class="product-title"><a href="single-product.html">Endeavor Daytrip
-                                                Backpack</a></h2>
+                                        </figure> -->
+                                        <!-- <div class="product-details">
+                                            <h2 class="product-title"><a href="single-product.html">
+                                                Endeavor Daytrip Backpack</a></h2>
                                             <div class="rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
@@ -298,8 +308,8 @@
                                                 <a href="compare.html" class="btn btn-round btn-cart"
                                                    title="Add to Compare"><i class="fa fa-exchange"></i></a>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </div> -->
+                                    <!-- </div> -->
                                     <!-- Single Product End -->
                                 </div>
                             </div>
@@ -655,7 +665,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <a href="shop.html">
-                    <img src="assets_fontend/img/banner-home-one.jpg" alt="Banner"/>
+                    <img src="assets_fontend/img/banner-home-one.jpg" alt="Banner" style="margin-left: 67px;" />
                 </a>
             </div>
         </div>

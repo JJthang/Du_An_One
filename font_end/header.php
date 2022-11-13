@@ -349,8 +349,7 @@
                     <div class="main-menu-wrap">
                         <nav class="mainmenu">
                             <ul class="main-navbar clearfix">
-                                <li class="dropdown-show"><a href="index.html" class="arrow-toggle">Home</a>
-                                </li>
+                                <li class="dropdown-show"><a href="index.php?act=go_home" class="arrow-toggle">Home</a>
                                 <li><a href="about.html">About Us</a></li>
                                 <li class="dropdown-show"><a href="#" class="arrow-toggle">Danh Mục</a>
                                     <ul class="mega-menu-wrap dropdown-nav">

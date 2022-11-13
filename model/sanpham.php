@@ -18,7 +18,13 @@
     }
     function load_sp_home()
     {
-        $sql = "select * from sanpham where 1 order by id desc limit 0,12";
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 0,7";
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
+    function load_sp_home1()
+    {
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 0,12";
             $listsanpham= pdo_query($sql);
             return $listsanpham;
     }
@@ -47,7 +53,7 @@
     }
     function sanpham_cungloai($id,$id_danhmuc)
     {
-        $sql = "SELECT * from sanpham where id_danhmuc = ". $id_danhmuc ." AND id <>". $id;
+        $sql = "SELECT * from sanpham where id_danhmuc = ". $id_danhmuc ." AND id_sp <>". $id;
         $listsanpham= pdo_query($sql);
         return $listsanpham;
     }
