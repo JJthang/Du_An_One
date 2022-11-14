@@ -683,105 +683,230 @@
                     <div class="category-product-wrap">
                         <h4 class="cate-pro-title"><a href="shop.html">Tablet</a></h4>
                         <figure class="cat-banner">
-                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-1.jpg" alt="Category"></a>
+                            <a href="shop.html"><img style="height: 280px;" src="assets_fontend/img/banner-laptop1.jpg" alt="Category" ></a>
                         </figure>
 
                         <div class="products-wrapper">
                             <div class="cat-pro-carousel owl-carousel">
                                 <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-1.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Rival Field
-                                            Messenger</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php
+                                foreach ($spnew1 as $key) {
+                                        extract($key);
+                                        
+                                        $hinh = "upload/".$img_sp;
+                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                      echo '
+                                      <div class="single-product-item">
+                                      <figure class="product-thumb">
+                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
+                                                                             alt="Product"></a>
+                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
+                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
+                                      </figure>
+                                      <div class="product-details">
+                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <div class="rating">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                          </div>
+                                          <span class="product-price">$'. $price_sp .'</span>
+  
+                                          <div class="product-meta">
+                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
+                                                      class="fa fa-shopping-cart"></i></a>
+                                              <a href="wishlist.html" class="btn btn-round btn-cart"
+                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                              <a href="compare.html" class="btn btn-round btn-cart"
+                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      ';
+                                }
+                                 ?>
                                 <!-- Single Product End -->
 
                                 <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-2.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Compete Track
-                                            Tote</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
+                                <!-- Single Product End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Category Product End -->
 
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Single Category Product Start -->
+                <div class="col-lg-6">
+                    <div class="category-product-wrap">
+                        <h4 class="cate-pro-title"><a href="shop.html">Computer</a></h4>
+                        <figure class="cat-banner">
+                            <a href="shop.html"><img style="height: 280px;" src="assets_fontend/img/banner-laptop2.jpg" alt="Category"></a>
+                        </figure>
+
+                        <div class="products-wrapper">
+                            <div class="cat-pro-carousel owl-carousel">
+                                <!-- Single Product Start -->
+                                <?php
+                                foreach ($spnew1 as $key) {
+                                        extract($key);
+                                        
+                                        $hinh = "upload/".$img_sp;
+                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                      echo '
+                                      <div class="single-product-item">
+                                      <figure class="product-thumb">
+                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
+                                                                             alt="Product"></a>
+                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
+                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
+                                      </figure>
+                                      <div class="product-details">
+                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <div class="rating">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                          </div>
+                                          <span class="product-price">$'. $price_sp .'</span>
+  
+                                          <div class="product-meta">
+                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
+                                                      class="fa fa-shopping-cart"></i></a>
+                                              <a href="wishlist.html" class="btn btn-round btn-cart"
+                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                              <a href="compare.html" class="btn btn-round btn-cart"
+                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      ';
+                                }
+                                 ?>
                                 <!-- Single Product End -->
 
                                 <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Voyage Yoga Bag</a>
-                                        </h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
+                                <!-- Single Product End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Category Product End -->
 
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Single Category Product Start -->
+                <div class="col-lg-6">
+                    <div class="category-product-wrap">
+                        <h4 class="cate-pro-title"><a href="shop.html">Computer</a></h4>
+                        <figure class="cat-banner">
+                            <a href="shop.html"><img style="height: 249px;" src="assets_fontend/img/banner-laptop3.webp" alt="Category"></a>
+                        </figure>
+
+                        <div class="products-wrapper">
+                            <div class="cat-pro-carousel owl-carousel">
+                                <!-- Single Product Start -->
+                                <?php
+                                foreach ($spnew1 as $key) {
+                                        extract($key);
+                                        
+                                        $hinh = "upload/".$img_sp;
+                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                      echo '
+                                      <div class="single-product-item">
+                                      <figure class="product-thumb">
+                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
+                                                                             alt="Product"></a>
+                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
+                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
+                                      </figure>
+                                      <div class="product-details">
+                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <div class="rating">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                          </div>
+                                          <span class="product-price">$'. $price_sp .'</span>
+  
+                                          <div class="product-meta">
+                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
+                                                      class="fa fa-shopping-cart"></i></a>
+                                              <a href="wishlist.html" class="btn btn-round btn-cart"
+                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                              <a href="compare.html" class="btn btn-round btn-cart"
+                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      ';
+                                }
+                                 ?>
+                                <!-- Single Product End -->
+
+                                <!-- Single Product Start -->
+                                <!-- Single Product End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Category Product End -->
+
+                <!-- Single Category Product Start -->
+                <div class="col-lg-6">
+                    <div class="category-product-wrap">
+                        <h4 class="cate-pro-title"><a href="shop.html">Computer</a></h4>
+                        <figure class="cat-banner">
+                            <a href="shop.html"><img height="250px" src="assets_fontend/img/banner-laptop4.webp" alt="Category"></a>
+                        </figure>
+
+                        <div class="products-wrapper">
+                            <div class="cat-pro-carousel owl-carousel">
+                                <!-- Single Product Start -->
+                                <?php
+                                foreach ($spnew1 as $key) {
+                                        extract($key);
+                                        
+                                        $hinh = "upload/".$img_sp;
+                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                      echo '
+                                      <div class="single-product-item">
+                                      <figure class="product-thumb">
+                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
+                                                                             alt="Product"></a>
+                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
+                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
+                                      </figure>
+                                      <div class="product-details">
+                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <div class="rating">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                          </div>
+                                          <span class="product-price">$'. $price_sp .'</span>
+  
+                                          <div class="product-meta">
+                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
+                                                      class="fa fa-shopping-cart"></i></a>
+                                              <a href="wishlist.html" class="btn btn-round btn-cart"
+                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                              <a href="compare.html" class="btn btn-round btn-cart"
+                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      ';
+                                }
+                                 ?>
+                                <!-- Single Product End -->
+
+                                <!-- Single Product Start -->
                                 <!-- Single Product End -->
                             </div>
                         </div>
@@ -800,99 +925,47 @@
                         <div class="products-wrapper">
                             <div class="cat-pro-carousel owl-carousel">
                                 <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Rival Field
-                                            Messenger</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php
+                                foreach ($spnew1 as $key) {
+                                        extract($key);
+                                        
+                                        $hinh = "upload/".$img_sp;
+                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                      echo '
+                                      <div class="single-product-item">
+                                      <figure class="product-thumb">
+                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
+                                                                             alt="Product"></a>
+                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
+                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
+                                      </figure>
+                                      <div class="product-details">
+                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <div class="rating">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                          </div>
+                                          <span class="product-price">$'. $price_sp .'</span>
+  
+                                          <div class="product-meta">
+                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
+                                                      class="fa fa-shopping-cart"></i></a>
+                                              <a href="wishlist.html" class="btn btn-round btn-cart"
+                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                              <a href="compare.html" class="btn btn-round btn-cart"
+                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      ';
+                                }
+                                 ?>
                                 <!-- Single Product End -->
 
                                 <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-4.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Compete Track
-                                            Tote</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-5.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Voyage Yoga Bag</a>
-                                        </h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Single Product End -->
                             </div>
                         </div>
@@ -903,436 +976,55 @@
                 <!-- Single Category Product Start -->
                 <div class="col-lg-6">
                     <div class="category-product-wrap">
-                        <h4 class="cate-pro-title"><a href="shop.html">Android TV</a></h4>
+                        <h4 class="cate-pro-title"><a href="shop.html">Computer</a></h4>
                         <figure class="cat-banner">
-                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-3.jpg" alt="Category"></a>
+                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-2.jpg" alt="Category"></a>
                         </figure>
 
                         <div class="products-wrapper">
                             <div class="cat-pro-carousel owl-carousel">
                                 <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Rival Field
-                                            Messenger</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php
+                                foreach ($spnew1 as $key) {
+                                        extract($key);
+                                        
+                                        $hinh = "upload/".$img_sp;
+                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                      echo '
+                                      <div class="single-product-item">
+                                      <figure class="product-thumb">
+                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
+                                                                             alt="Product"></a>
+                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
+                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
+                                      </figure>
+                                      <div class="product-details">
+                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <div class="rating">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                          </div>
+                                          <span class="product-price">$'. $price_sp .'</span>
+  
+                                          <div class="product-meta">
+                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
+                                                      class="fa fa-shopping-cart"></i></a>
+                                              <a href="wishlist.html" class="btn btn-round btn-cart"
+                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                              <a href="compare.html" class="btn btn-round btn-cart"
+                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      ';
+                                }
+                                 ?>
                                 <!-- Single Product End -->
 
                                 <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-4.jpg" alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Compete Track
-                                            Tote</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-5.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Voyage Yoga Bag</a>
-                                        </h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Category Product End -->
-
-                <!-- Single Category Product Start -->
-                <div class="col-lg-6">
-                    <div class="category-product-wrap">
-                        <h4 class="cate-pro-title"><a href="shop.html">Headphones</a></h4>
-                        <figure class="cat-banner">
-                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-4.jpg" alt="Category"></a>
-                        </figure>
-
-                        <div class="products-wrapper">
-                            <div class="cat-pro-carousel owl-carousel">
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Rival Field
-                                            Messenger</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-4.jpg" alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Compete Track
-                                            Tote</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-5.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Voyage Yoga Bag</a>
-                                        </h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Category Product End -->
-
-                <!-- Single Category Product Start -->
-                <div class="col-lg-6">
-                    <div class="category-product-wrap">
-                        <h4 class="cate-pro-title"><a href="shop.html">Mobiles</a></h4>
-                        <figure class="cat-banner">
-                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-5.jpg" alt="Category"></a>
-                        </figure>
-
-                        <div class="products-wrapper">
-                            <div class="cat-pro-carousel owl-carousel">
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Rival Field
-                                            Messenger</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-4.jpg" alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Compete Track
-                                            Tote</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-5.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Voyage Yoga Bag</a>
-                                        </h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Category Product End -->
-
-                <!-- Single Category Product Start -->
-                <div class="col-lg-6">
-                    <div class="category-product-wrap">
-                        <h4 class="cate-pro-title"><a href="shop.html">Camera</a></h4>
-                        <figure class="cat-banner">
-                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-6.jpg" alt="Category"></a>
-                        </figure>
-
-                        <div class="products-wrapper">
-                            <div class="cat-pro-carousel owl-carousel">
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Rival Field
-                                            Messenger</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-4.jpg" alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Compete Track
-                                            Tote</a></h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-product-item">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-5.jpg"
-                                                                           alt="Product"></a>
-                                        <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                           data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2 class="product-title"><a href="single-product.html">Voyage Yoga Bag</a>
-                                        </h2>
-                                        <div class="rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <span class="product-price">$40.99</span>
-
-                                        <div class="product-meta">
-                                            <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                    class="fa fa-shopping-cart"></i></a>
-                                            <a href="wishlist.html" class="btn btn-round btn-cart"
-                                               title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                            <a href="compare.html" class="btn btn-round btn-cart"
-                                               title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Single Product End -->
                             </div>
                         </div>
@@ -1386,73 +1078,6 @@
 <!-- End Category Banner -->
 
 <!-- Start Popular Categories -->
-<section id="popular-category">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-title">
-                    <h2>Popular Categories</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="popular-cate-wrap">
-            <div class="row">
-                <!-- Single Popular Category -->
-                <div class="col-lg-6">
-                    <div class="single-popular-category">
-                        <dl class="popular-cat-list">
-                            <dt>Computer</dt>
-                            <dd><a href="#">Laptop</a></dd>
-                            <dd><a href="#">Ram/Rom</a></dd>
-                            <dd><a href="#">Monitors</a></dd>
-                        </dl>
-                    </div>
-                </div>
-                <!-- Single Popular Category End -->
-
-                <!-- Single Popular Category -->
-                <div class="col-lg-6">
-                    <div class="single-popular-category pop-cat-2">
-                        <dl class="popular-cat-list">
-                            <dt>Smart Phones</dt>
-                            <dd><a href="#">Headphone</a></dd>
-                            <dd><a href="#">Earphone</a></dd>
-                            <dd><a href="#">Charger</a></dd>
-                        </dl>
-                    </div>
-                </div>
-                <!-- Single Popular Category End -->
-
-                <!-- Single Popular Category -->
-                <div class="col-lg-6">
-                    <div class="single-popular-category pop-cat-3">
-                        <dl class="popular-cat-list">
-                            <dt>Camera</dt>
-                            <dd><a href="#">Memory</a></dd>
-                            <dd><a href="#">Flash</a></dd>
-                            <dd><a href="#">Lens</a></dd>
-                        </dl>
-                    </div>
-                </div>
-                <!-- Single Popular Category End -->
-
-                <!-- Single Popular Category -->
-                <div class="col-lg-6">
-                    <div class="single-popular-category pop-cat-4">
-                        <dl class="popular-cat-list">
-                            <dt>Desktop</dt>
-                            <dd><a href="#">Keyboard</a></dd>
-                            <dd><a href="#">Speaker</a></dd>
-                            <dd><a href="#">Ram</a></dd>
-                        </dl>
-                    </div>
-                </div>
-                <!-- Single Popular Category End -->
-            </div>
-        </div>
-    </div>
-</section>
 <!-- End Popular Categories -->
 
 <!--== Start Recent Post & Reviews Area ==-->
@@ -1477,7 +1102,7 @@
                                     <!-- Single Recent Post Start -->
                                     <div class="single-blog-wrap">
                                         <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="../assets_fontend/img/blog-thumb-1.jpg"
+                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-1.jpg"
                                                                             alt="Blog"/></a>
                                             <figcaption class="blog-icon">
                                                 <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
@@ -1499,7 +1124,7 @@
                                     <!-- Single Recent Post Start -->
                                     <div class="single-blog-wrap">
                                         <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="../assets_fontend/img/blog-thumb-2.jpg"
+                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-2.jpg"
                                                                             alt="Blog"/></a>
                                             <figcaption class="blog-icon">
                                                 <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
@@ -1522,7 +1147,7 @@
                                     <!-- Single Recent Post Start -->
                                     <div class="single-blog-wrap">
                                         <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="../assets_fontend/img/blog-thumb-3.jpg"
+                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-3.jpg"
                                                                             alt="Blog"/></a>
                                             <figcaption class="blog-icon">
                                                 <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
@@ -1545,7 +1170,7 @@
                                     <!-- Single Recent Post Start -->
                                     <div class="single-blog-wrap">
                                         <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="../assets_fontend/img/blog-thumb-4.jpg"
+                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-4.jpg"
                                                                             alt="Blog"/></a>
                                             <figcaption class="blog-icon">
                                                 <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
@@ -1590,7 +1215,7 @@
                                     <!-- Single Reviews Start -->
                                     <div class="single-reviews">
                                         <a href="#" class="client-thumb">
-                                            <img src="../assets_fontend/img/client-1.jpg" alt="Cliebt"/>
+                                            <img src="assets_fontend/img/client-1.jpg" alt="Cliebt"/>
                                         </a>
                                         <a href="#" class="client-name">Stefano Colombarolli <span
                                                 class="client-designation">Akamla Manager</span></a>
@@ -1604,7 +1229,7 @@
                                     <!-- Single Reviews Start -->
                                     <div class="single-reviews">
                                         <a href="#" class="client-thumb">
-                                            <img src="../assets_fontend/img/client-2.jpg" alt="Cliebt"/>
+                                            <img src="assets_fontend/img/client-2.jpg" alt="Cliebt"/>
                                         </a>
                                         <a href="#" class="client-name">Alex Tuntuni <span class="client-designation">Product Manager</span></a>
 
@@ -1617,7 +1242,7 @@
                                     <!-- Single Reviews Start -->
                                     <div class="single-reviews">
                                         <a href="#" class="client-thumb">
-                                            <img src="../assets_fontend/img/client-3.jpg" alt="Cliebt"/>
+                                            <img src="assets_fontend/img/client-3.jpg" alt="Cliebt"/>
                                         </a>
                                         <a href="#" class="client-name">Stefano Colombarolli <span
                                                 class="client-designation">Akamla Manager</span></a>
@@ -1647,37 +1272,37 @@
                 <div class="brand-logo-carousel owl-carousel">
                     <!-- Single Brand Logo Start -->
                     <div class="single-brand-item">
-                        <a href="#"><img src="../assets_fontend/img/logo-1.png" alt="brand"></a>
+                        <a href="#"><img src="assets_fontend/img/logo-1.png" alt="brand"></a>
                     </div>
                     <!-- Single Brand Logo End -->
 
                     <!-- Single Brand Logo Start -->
                     <div class="single-brand-item">
-                        <a href="#"><img src="../assets_fontend/img/logo-2.png" alt="brand"></a>
+                        <a href="#"><img src="assets_fontend/img/logo-2.png" alt="brand"></a>
                     </div>
                     <!-- Single Brand Logo End -->
 
                     <!-- Single Brand Logo Start -->
                     <div class="single-brand-item">
-                        <a href="#"><img src="../assets_fontend/img/logo-3.png" alt="brand"></a>
+                        <a href="#"><img src="assets_fontend/img/logo-3.png" alt="brand"></a>
                     </div>
                     <!-- Single Brand Logo End -->
 
                     <!-- Single Brand Logo Start -->
                     <div class="single-brand-item">
-                        <a href="#"><img src="../assets_fontend/img/logo-4.png" alt="brand"></a>
+                        <a href="#"><img src="assets_fontend/img/logo-4.png" alt="brand"></a>
                     </div>
                     <!-- Single Brand Logo End -->
 
                     <!-- Single Brand Logo Start -->
                     <div class="single-brand-item">
-                        <a href="#"><img src="../assets_fontend/img/logo-5.png" alt="brand"></a>
+                        <a href="#"><img src="assets_fontend/img/logo-5.png" alt="brand"></a>
                     </div>
                     <!-- Single Brand Logo End -->
 
                     <!-- Single Brand Logo Start -->
                     <div class="single-brand-item">
-                        <a href="#"><img src="../assets_fontend/img/logo-6.png" alt="brand"></a>
+                        <a href="#"><img src="assets_fontend/img/logo-6.png" alt="brand"></a>
                     </div>
                     <!-- Single Brand Logo End -->
                 </div>

@@ -49,7 +49,7 @@
                         <!-- Product Details Start -->
                         <div class="col-lg-7">
                             <div class="product-details">
-                                <h2><a href="single-product.html">MH02-Gray</a></h2>
+                                <h2><a href="single-product.html"><?php echo $name_sp  ?></a></h2>
 
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
@@ -64,9 +64,10 @@
                                 <div class="product-info-stock-sku">
                                     <span class="product-stock-status text-success">In Stock</span>
                                     <span class="product-sku-status"><strong>SKU</strong> MH03</span>
+                                    <p style="padding-top: 10px;"><b>Bảo hàng : </b> 12 Tháng Chính hãng</p>
                                 </div>
 
-                                <p class="products-desc"><?php echo $mota_sp  ?></p>
+                                <p class="products-desc"></p>
                                 <div class="product-quantity d-flex align-items-center">
                                     <div class="quantity-field">
                                         <label for="qty">Qty</label>
@@ -103,23 +104,7 @@
                                 <!-- Single Product tab Content -->
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="description">
-                                        <p>Stay comfortable and stay in the race no matter what the weather's up to. The
-                                            Bruno Compete Hoodie's water-repellent exterior shields you from the
-                                            elements, while advanced fabric technology inside wicks moisture to keep you
-                                            dry.Stay comfortable and stay in the race no matter what the weather's up
-                                            to. The Bruno Compete Hoodie's water-repellent exterior shields you from the
-                                            elements, while advanced fabric technology inside wicks moisture to keep you
-                                            dry.Stay comfortable and stay in the race no matter what the weather's up
-                                            to. The Bruno Compete Hoodie's water-repellent exterior shields you from the
-                                            elements, while advanced fabric technology inside wicks moisture to keep you
-                                            dry.</p>
-
-                                        <ul>
-                                            <li>Adipisicing elitEnim, laborum.</li>
-                                            <li>Lorem ipsum dolor sit</li>
-                                            <li>Dolorem molestiae quod voluptatem! Sint.</li>
-                                            <li>Iure obcaecati odio pariatur quae saepe!</li>
-                                        </ul>
+                                        <p><?php echo $mota_sp  ?></p>
                                     </div>
 
                                     <div class="tab-pane fade" id="reviews">

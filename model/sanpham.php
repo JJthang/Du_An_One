@@ -28,6 +28,12 @@
             $listsanpham= pdo_query($sql);
             return $listsanpham;
     }
+    function load_sp_home2()
+    {
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 0,3";
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
     function load_sanpham($kyw = "", $id_danhmuc = 0)
     {
         $sql = "select * from sanpham where 1";
