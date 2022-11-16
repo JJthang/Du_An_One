@@ -69,9 +69,9 @@
                 <div class="col-md-7 col-lg-6 mt-xs-10">
                     <div class="site-setting-menu">
                         <ul class="nav justify-content-center justify-content-md-end">
-                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="index.php?act=myaccount">My Account</a></li>
                             <li><a href="wishlist.html">Wishlist</a></li>
-                            <li><a href="login-register.html">Sign In</a></li>
+                            <li><a href="index.php?act=login">Sign In</a></li>
                             <li class="switcher dropdown-show"><a href="#" class="arrow-toggle">English</a>
                                 <ul class="dropdown-nav">
                                     <li><a href="#">Bengali</a></li>

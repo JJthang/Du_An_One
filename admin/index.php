@@ -3,6 +3,7 @@
     include "../model/danh_muc.php";
     include "../model/sanpham.php"; 
     include "header.php";
+    include "../model/taikhoan.php";
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
         switch ($act) {
@@ -118,6 +119,39 @@
                $listsanpham = load_sanpham("", 0);
                include "sanpham/sanpham_list.php";
                break;
+            
+            // Tài khoản
+            case'listtk':
+                $xuattk = load_all_taikhoan();
+                include "taikhoan/list_tk.php";
+                break;
+            case 'sua_tk':
+                if (isset($_GET['id_tk']) && ($_GET['id_tk'] > 0)) {
+                    $sua_tk = load_one_tk($_GET['id_tk']);
+                }
+                include "taikhoan/sua_tk.php";
+                break;
+            case 'updatetk':
+                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                  $name_tk = $_POST['name_tk'];
+                  $pass_tk = $_POST['pass_tk'];
+                  $email_tk = $_POST['email_tk'];
+                  $address_tk = $_POST['address_tk'];
+                  $tel_tk = $_POST['tel_tk'];
+                  $id_tk = $_POST['id_tk'];
+                  update($id_tk, $name_tk, $pass_tk, $email_tk, $address_tk,$tel_tk);
+                  $thongbao = "Cập nhật thành công";
+                }
+                include "taikhoan/sua_tk.php";
+            case 'xoa_tk':
+                if (isset($_GET['id_tk']) && ($_GET['id_tk'])) {
+                    delete_taikhoan($_GET['id_tk']);
+                    $thongbao = "Xóa thành công";
+                }
+                $sql = " select * from taikhoan order by id_tk";
+                $xuattk = pdo_query($sql);
+                include "taikhoan/list_tk.php";
+                break;
             default:
                 include "home.php";
                 break;
