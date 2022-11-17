@@ -4,6 +4,7 @@
     include "../model/sanpham.php"; 
     include "header.php";
     include "../model/taikhoan.php";
+    include "../model/binhluan.php";
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
         switch ($act) {
@@ -151,6 +152,17 @@
                 $sql = " select * from taikhoan order by id_tk";
                 $xuattk = pdo_query($sql);
                 include "taikhoan/list_tk.php";
+                break;
+            case 'list_bl':
+                $xuatBL = load_binhluan1_all(0);
+                include "binhluan/list_bl.php";
+                break;
+            case 'xoabl':
+                if (isset($_GET['id_bl'])&&($_GET['id_bl'])) {
+                    delete_bl($_GET['id_bl']);
+                }
+                $xuatBL = load_binhluan1_all(0);
+                include "binhluan/list_bl.php";
                 break;
             default:
                 include "home.php";

@@ -162,7 +162,7 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                             </div>
-                                            <span class="product-price">' . $price_sp . '</span>
+                                            <span class="product-price">$' . $price_sp . '</span>
 
                                             <div class="product-meta">
                                                 <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i

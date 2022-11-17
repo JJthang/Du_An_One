@@ -106,51 +106,20 @@
                                     <div class="tab-pane fade show active" id="description">
                                         <p><?php echo $mota_sp  ?></p>
                                     </div>
-
-                                    <div class="tab-pane fade" id="reviews">
-                                        <div class="row">
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                    <script>
+                                        $(document).ready(function(){
+                                                $("#binhluan_sp").load("font_end/bl_sp.php", {idpro: <?=$id_sp?>});
+                                        });
+                                    </script>
+                                    <div class="tab-pane fade" id="reviews" >
+                                        <div class="row" id="binhluan_sp">
                                             <div class="col-lg-7">
-                                                <div class="product-ratting-wrap">
-                                                    <div class="pro-avg-ratting">
+                                                <div class="product-ratting-wrap" >
+                                                    <div class="pro-avg-ratting" >
                                                         <h4>4.5 <span>(Overall)</span></h4>
-                                                        <span>Based on 9 Comments</span>
                                                     </div>
-                                                    <div class="ratting-list">
-                                                        <div class="sin-list float-left">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <span>(5)</span>
-                                                        </div>
-                                                        <div class="sin-list float-left">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <span>(3)</span>
-                                                        </div>
-                                                        <div class="sin-list float-left">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <span>(1)</span>
-                                                        </div>
-                                                        <div class="sin-list float-left">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <span>(0)</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="rattings-wrapper">
-
+                                                    <div class="rattings-wrapper" >
                                                         <div class="sin-rattings">
                                                             <div class="ratting-author">
                                                                 <h3>Cristopher Lee</h3>
@@ -163,46 +132,6 @@
                                                                     <span>(5)</span>
                                                                 </div>
                                                             </div>
-                                                            <p>enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                                                odit aut fugit, sed quia res eos qui ratione voluptatem
-                                                                sequi Neque porro quisquam est, qui dolorem ipsum quia
-                                                                dolor sit amet, consectetur, adipisci veli</p>
-                                                        </div>
-
-                                                        <div class="sin-rattings">
-                                                            <div class="ratting-author">
-                                                                <h3>Nirob Khan</h3>
-                                                                <div class="ratting-star">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <span>(5)</span>
-                                                                </div>
-                                                            </div>
-                                                            <p>enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                                                odit aut fugit, sed quia res eos qui ratione voluptatem
-                                                                sequi Neque porro quisquam est, qui dolorem ipsum quia
-                                                                dolor sit amet, consectetur, adipisci veli</p>
-                                                        </div>
-
-                                                        <div class="sin-rattings">
-                                                            <div class="ratting-author">
-                                                                <h3>MD.ZENAUL ISLAM</h3>
-                                                                <div class="ratting-star">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <span>(5)</span>
-                                                                </div>
-                                                            </div>
-                                                            <p>enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                                                odit aut fugit, sed quia res eos qui ratione voluptatem
-                                                                sequi Neque porro quisquam est, qui dolorem ipsum quia
-                                                                dolor sit amet, consectetur, adipisci veli</p>
                                                         </div>
 
                                                     </div>
@@ -210,24 +139,6 @@
                                                         <h3>Add your Comments</h3>
                                                         <form action="#" method="post">
                                                             <div class="ratting-form row">
-                                                                <div class="col-12 mb-4">
-                                                                    <h5>Rating:</h5>
-                                                                    <div class="ratting-star fix">
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                        <i class="fa fa-star-o"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-12 mb-4">
-                                                                    <label for="name">Name:</label>
-                                                                    <input id="name" placeholder="Name" type="text">
-                                                                </div>
-                                                                <div class="col-md-6 col-12 mb-4">
-                                                                    <label for="email">Email:</label>
-                                                                    <input id="email" placeholder="Email" type="text">
-                                                                </div>
                                                                 <div class="col-12 mb-4">
                                                                     <label for="your-review">Your Review:</label>
                                                                     <textarea name="review" id="your-review"

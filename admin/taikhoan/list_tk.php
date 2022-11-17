@@ -48,7 +48,7 @@
 <script>
     function confirmDesactiv()
 {
-   if(confirm("Are you sure ?"))
+   if(confirm("Bạn chắc chắn muốn xóa chứ ?"))
      return true;
   
   return false;

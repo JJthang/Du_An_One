@@ -233,7 +233,7 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=adddm" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Danh mục</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=addsp" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Sản phẩm</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=listtk" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Tài khoản</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="tables.html" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">Bình luận</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php?act=list_bl" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">Bình luận</span></a></li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
