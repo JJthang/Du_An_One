@@ -649,6 +649,7 @@ label {
 
 .minicart-wrapper {
   position: relative;
+  display: flex;
 }
 .minicart-wrapper .btn-minicart {
   padding: 18px 25px;

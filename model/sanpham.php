@@ -30,7 +30,38 @@
     }
     function load_sp_home2()
     {
-        $sql = "select * from sanpham where 1 order by id_sp desc limit 0,3";
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 4,7";
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
+    
+    function load_sp_home3()
+    {
+        $sql = "select * from sanpham where 1 order by id_sp asc limit 0,3";
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
+    function load_sp_home4()
+    {
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 8,11";
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
+    function load_sp_home5()
+    {
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 6,9";
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
+    function load_sp_home6()
+    {
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 7,10";
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
+    function load_sp_home7()
+    {
+        $sql = "select * from sanpham where 1 order by id_sp desc limit 9,12";
             $listsanpham= pdo_query($sql);
             return $listsanpham;
     }

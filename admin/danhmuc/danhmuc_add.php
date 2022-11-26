@@ -9,9 +9,9 @@
             <br>
             <input type="text" class="import" name="tenloai">
            </div>
-                <input type="submit" name="themmoi" id="" value="Thêm mới" >
+                <input type="submit" name="themmoi" id="" value="Thêm mới" style="background-color: #7460ee; border-color:#7460ee; color: white; border-radius: 2px; width: 85px; height: 35px; cursor: pointer;">
                 <a href="index.php?act=listdm" style="padding-left: 10px;">
-                    <input type="button"  id="" value="Danh sách">
+                    <input type="button"  id="" value="Danh sách" style="color: #fff;background-color: #6c757d;border-color: #6c757d; border-radius: 2px; width: 85px; height: 35px; cursor: pointer;">
                 </a>
                 
         </form>

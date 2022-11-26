@@ -5,6 +5,7 @@
     include "header.php";
     include "../model/taikhoan.php";
     include "../model/binhluan.php";
+    include "../model/cart.php";
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
         switch ($act) {
@@ -163,6 +164,46 @@
                 }
                 $xuatBL = load_binhluan1_all(0);
                 include "binhluan/list_bl.php";
+                break;
+
+            case 'don_hang':
+                if (isset($_POST['kwn']) && ($_POST['kwn'] != "" )) {
+                    $kwn = $_POST['kwn'];
+                }else{
+                    $kwn = "";
+                }
+                $list_bill = load_all_bill1($kwn,0);
+                include 'bill/list_bill.php';
+                break;
+            case 'suabill':
+                if (isset($_GET['id_bill']) && ($_GET['id_bill'])) {
+                    $bill = load_one_bill($_GET['id_bill']);
+                }
+                include "bill/sua_bill.php";
+            break;
+            case 'update_bill':
+                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                    $id_bill = $_POST['id_bill'];
+                    $status_hang = $_POST['status_bill'];
+                    update_bill($id_bill,$status_hang);
+                    $thongbao = "Cập nhật thành công";
+                }
+                if (isset($_POST['kwn']) && ($_POST['kwn'] != "" )) {
+                    $kwn = $_POST['kwn'];
+                }else{
+                    $kwn = "";
+                }
+                $list_bill = load_all_bill1($kwn,0);
+                include "bill/list_bill.php";
+                break;
+            case 'tk_sp':
+                $list_tk = loadall_thongke();
+                include "thongke/list_tk.php";
+                break;
+
+            case 'bieudo':
+                $list_tk1 = loadall_thongke_bieudo();
+                include "thongke/bieu_do.php";
                 break;
             default:
                 include "home.php";

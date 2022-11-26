@@ -154,7 +154,7 @@
                                                     class="fa fa-eye"></i></a>
                                         </figure>
                                         <div class="product-details">
-                                            <h2 class="product-title"><a href="single-product.html">' . $name_sp . '</a></h2>
+                                            <h2 class="product-title"><a href="'.$linksp.'">' . $name_sp . '</a></h2>
                                             <div class="rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
@@ -165,12 +165,25 @@
                                             <span class="product-price">$' . $price_sp . '</span>
 
                                             <div class="product-meta">
-                                                <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                        class="fa fa-shopping-cart"></i></a>
-                                                <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                   title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="compare.html" class="btn btn-round btn-cart"
-                                                   title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                                <form action="index.php?act=cart" method="post">
+                                                   <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                                   <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                                   <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                                   <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                                   <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                                   border: none;
+                                                   color: #fff;
+                                                   font-weight: 600;
+                                                   line-height: 1.2;
+                                                   margin: 0;
+                                                   padding: 10px 25px;
+                                                   text-transform: uppercase;
+                                                   outline: none;
+                                                   border-radius: 0;
+                                                   font-size: 1.4rem;
+                                                   margin-left: 55px;
+                                                   ">
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -690,7 +703,7 @@
                             <div class="cat-pro-carousel owl-carousel">
                                 <!-- Single Product Start -->
                                 <?php
-                                foreach ($spnew1 as $key) {
+                                foreach ($spnew3 as $key) {
                                         extract($key);
                                         
                                         $hinh = "upload/".$img_sp;
@@ -704,7 +717,7 @@
                                              data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
                                       </figure>
                                       <div class="product-details">
-                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <h2 class="product-title"><a href="'.$linksp.'">'.$name_sp.'</a></h2>
                                           <div class="rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -715,12 +728,25 @@
                                           <span class="product-price">$'. $price_sp .'</span>
   
                                           <div class="product-meta">
-                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                      class="fa fa-shopping-cart"></i></a>
-                                              <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                              <a href="compare.html" class="btn btn-round btn-cart"
-                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          <form action="index.php?act=cart" method="post">
+                                          <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                          <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                          <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                          <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          border: none;
+                                          color: #fff;
+                                          font-weight: 600;
+                                          line-height: 1.2;
+                                          margin: 0;
+                                          padding: 10px 25px;
+                                          text-transform: uppercase;
+                                          outline: none;
+                                          border-radius: 0;
+                                          font-size: 1.4rem;
+                                          margin-left: 55px;
+                                          ">
+                                       </form>
                                           </div>
                                       </div>
                                   </div>
@@ -749,7 +775,7 @@
                             <div class="cat-pro-carousel owl-carousel">
                                 <!-- Single Product Start -->
                                 <?php
-                                foreach ($spnew1 as $key) {
+                                foreach ($spnew4 as $key) {
                                         extract($key);
                                         
                                         $hinh = "upload/".$img_sp;
@@ -763,7 +789,9 @@
                                              data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
                                       </figure>
                                       <div class="product-details">
-                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <h2 class="product-title">
+                                          <a href="'.$linksp.'">'.$name_sp.'</a>
+                                          </h2>
                                           <div class="rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -774,12 +802,25 @@
                                           <span class="product-price">$'. $price_sp .'</span>
   
                                           <div class="product-meta">
-                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                      class="fa fa-shopping-cart"></i></a>
-                                              <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                              <a href="compare.html" class="btn btn-round btn-cart"
-                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          <form action="index.php?act=cart" method="post">
+                                          <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                          <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                          <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                          <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          border: none;
+                                          color: #fff;
+                                          font-weight: 600;
+                                          line-height: 1.2;
+                                          margin: 0;
+                                          padding: 10px 25px;
+                                          text-transform: uppercase;
+                                          outline: none;
+                                          border-radius: 0;
+                                          font-size: 1.4rem;
+                                          margin-left: 55px;
+                                          ">
+                                       </form>
                                           </div>
                                       </div>
                                   </div>
@@ -808,7 +849,7 @@
                             <div class="cat-pro-carousel owl-carousel">
                                 <!-- Single Product Start -->
                                 <?php
-                                foreach ($spnew1 as $key) {
+                                foreach ($spnew5 as $key) {
                                         extract($key);
                                         
                                         $hinh = "upload/".$img_sp;
@@ -833,12 +874,25 @@
                                           <span class="product-price">$'. $price_sp .'</span>
   
                                           <div class="product-meta">
-                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                      class="fa fa-shopping-cart"></i></a>
-                                              <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                              <a href="compare.html" class="btn btn-round btn-cart"
-                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          <form action="index.php?act=cart" method="post">
+                                          <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                          <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                          <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                          <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          border: none;
+                                          color: #fff;
+                                          font-weight: 600;
+                                          line-height: 1.2;
+                                          margin: 0;
+                                          padding: 10px 25px;
+                                          text-transform: uppercase;
+                                          outline: none;
+                                          border-radius: 0;
+                                          font-size: 1.4rem;
+                                          margin-left: 55px;
+                                          ">
+                                       </form>
                                           </div>
                                       </div>
                                   </div>
@@ -867,7 +921,7 @@
                             <div class="cat-pro-carousel owl-carousel">
                                 <!-- Single Product Start -->
                                 <?php
-                                foreach ($spnew1 as $key) {
+                                foreach ($spnew6 as $key) {
                                         extract($key);
                                         
                                         $hinh = "upload/".$img_sp;
@@ -881,7 +935,7 @@
                                              data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
                                       </figure>
                                       <div class="product-details">
-                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <h2 class="product-title"><a href="'.$linksp.'">'.$name_sp.'</a></h2>
                                           <div class="rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -892,12 +946,97 @@
                                           <span class="product-price">$'. $price_sp .'</span>
   
                                           <div class="product-meta">
-                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                      class="fa fa-shopping-cart"></i></a>
-                                              <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                              <a href="compare.html" class="btn btn-round btn-cart"
-                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          <form action="index.php?act=cart" method="post">
+                                          <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                          <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                          <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                          <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          border: none;
+                                          color: #fff;
+                                          font-weight: 600;
+                                          line-height: 1.2;
+                                          margin: 0;
+                                          padding: 10px 25px;
+                                          text-transform: uppercase;
+                                          outline: none;
+                                          border-radius: 0;
+                                          font-size: 1.4rem;
+                                          margin-left: 55px;
+                                          ">
+                                       </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                                      ';
+                                }
+                                 ?>
+                                <!-- Single Product End -->
+
+                                <!-- Single Product Start -->
+                                <!-- Single Product End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Category Product End -->
+
+                <!-- Single Category Product Start -->
+                <div class="col-lg-6">
+                    <div class="category-product-wrap">
+                        <h4 class="cate-pro-title"><a href="shop.html">Computer</a></h4>
+                        <figure class="cat-banner">
+                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-2.jpg" alt="Category"></a>
+                        </figure>
+
+                        <div class="products-wrapper">
+                            <div class="cat-pro-carousel owl-carousel">
+                                <!-- Single Product Start -->
+                                <?php
+                                foreach ($spnew7 as $key) {
+                                        extract($key);
+                                        
+                                        $hinh = "upload/".$img_sp;
+                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                      echo '
+                                      <div class="single-product-item">
+                                      <figure class="product-thumb">
+                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
+                                                                             alt="Product"></a>
+                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
+                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
+                                      </figure>
+                                      <div class="product-details">
+                                          <h2 class="product-title"><a href="'.$linksp.'">'.$name_sp.'</a></h2>
+                                          <div class="rating">
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                              <i class="fa fa-star"></i>
+                                          </div>
+                                          <span class="product-price">$'. $price_sp .'</span>
+  
+                                          <div class="product-meta">
+                                          <form action="index.php?act=cart" method="post">
+                                          <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                          <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                          <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                          <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          border: none;
+                                          color: #fff;
+                                          font-weight: 600;
+                                          line-height: 1.2;
+                                          margin: 0;
+                                          padding: 10px 25px;
+                                          text-transform: uppercase;
+                                          outline: none;
+                                          border-radius: 0;
+                                          font-size: 1.4rem;
+                                          margin-left: 55px;
+                                          ">
+                                       </form>
                                           </div>
                                       </div>
                                   </div>
@@ -940,7 +1079,7 @@
                                              data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
                                       </figure>
                                       <div class="product-details">
-                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                          <h2 class="product-title"><a href="'.$linksp.'">'.$name_sp.'</a></h2>
                                           <div class="rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -951,71 +1090,25 @@
                                           <span class="product-price">$'. $price_sp .'</span>
   
                                           <div class="product-meta">
-                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                      class="fa fa-shopping-cart"></i></a>
-                                              <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                              <a href="compare.html" class="btn btn-round btn-cart"
-                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                          </div>
-                                      </div>
-                                  </div>
-                                      ';
-                                }
-                                 ?>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <!-- Single Product End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Category Product End -->
-
-                <!-- Single Category Product Start -->
-                <div class="col-lg-6">
-                    <div class="category-product-wrap">
-                        <h4 class="cate-pro-title"><a href="shop.html">Computer</a></h4>
-                        <figure class="cat-banner">
-                            <a href="shop.html"><img src="assets_fontend/img/cat-pro-2.jpg" alt="Category"></a>
-                        </figure>
-
-                        <div class="products-wrapper">
-                            <div class="cat-pro-carousel owl-carousel">
-                                <!-- Single Product Start -->
-                                <?php
-                                foreach ($spnew1 as $key) {
-                                        extract($key);
-                                        
-                                        $hinh = "upload/".$img_sp;
-                                        $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
-                                      echo '
-                                      <div class="single-product-item">
-                                      <figure class="product-thumb">
-                                          <a href="'.$linksp.'"><img style="width: 306px; height: 300px;" src="'.$hinh.'"
-                                                                             alt="Product"></a>
-                                          <a href="#" class="btn btn-round btn-cart" title="Quick View"
-                                             data-bs-toggle="modal" data-bs-target="#quickView"><i class="fa fa-eye"></i></a>
-                                      </figure>
-                                      <div class="product-details">
-                                          <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
-                                          <div class="rating">
-                                              <i class="fa fa-star"></i>
-                                              <i class="fa fa-star"></i>
-                                              <i class="fa fa-star"></i>
-                                              <i class="fa fa-star"></i>
-                                              <i class="fa fa-star"></i>
-                                          </div>
-                                          <span class="product-price">$'. $price_sp .'</span>
-  
-                                          <div class="product-meta">
-                                              <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                      class="fa fa-shopping-cart"></i></a>
-                                              <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                 title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                              <a href="compare.html" class="btn btn-round btn-cart"
-                                                 title="Add to Compare"><i class="fa fa-exchange"></i></a>
+                                          <form action="index.php?act=cart" method="post">
+                                          <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                          <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                          <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                          <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          border: none;
+                                          color: #fff;
+                                          font-weight: 600;
+                                          line-height: 1.2;
+                                          margin: 0;
+                                          padding: 10px 25px;
+                                          text-transform: uppercase;
+                                          outline: none;
+                                          border-radius: 0;
+                                          font-size: 1.4rem;
+                                          margin-left: 55px;
+                                          ">
+                                       </form>
                                           </div>
                                       </div>
                                   </div>
@@ -1036,232 +1129,7 @@
     </div>
 </section>
 <!-- End Product By Category -->
-
-<!-- Start Category Banner -->
-<div class="category-banner-area">
-    <div class="container">
-        <div class="row row-5">
-            <div class="col-md-3">
-                <a href="single-product-sale.html"><img src="assets_fontend/img/banner-masonry-1.jpg" alt="Banner"/></a>
-            </div>
-
-            <div class="col-md-9 ">
-                <div class="row row-5">
-                    <div class="col-md-8">
-                        <div class="row row-5">
-                            <div class="col-md-6 mt-10 mt-sm-0 mt-lg-0">
-                                <a href="single-product-sale.html"><img src="assets_fontend/img/banner-masonry-2.jpg"
-                                                                        alt="Banner"/></a>
-                            </div>
-                            <div class="col-md-6 mt-10 mt-sm-0 mt-lg-0">
-                                <a href="single-product-sale.html"><img src="assets_fontend/img/banner-masonry-3.jpg"
-                                                                        alt="Banner"/></a>
-                            </div>
-                        </div>
-
-                        <div class="row row-5">
-                            <div class="col-md-12 mt-10">
-                                <a href="single-product-sale.html"><img src="assets_fontend/img/banner-masonry-4.jpg"
-                                                                        alt="Banner"/></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mt-10 mt-sm-0 mt-lg-0">
-                        <a href="single-product-sale.html"><img src="assets_fontend/img/banner-masonry-5.jpg" alt="Banner"/></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- End Category Banner -->
-
-<!-- Start Popular Categories -->
-<!-- End Popular Categories -->
-
-<!--== Start Recent Post & Reviews Area ==-->
-<div class="recent-post-testimonial">
-    <div class="container">
-        <div class="row">
-            <!-- Recent Post Area Start -->
-            <div class="col-lg-7">
-                <div class="recent-post-area-wrap">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-title">
-                                <h2>Recent Posts</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="recent-post-content">
-                                <div class="recent-post-carousel owl-carousel">
-                                    <!-- Single Recent Post Start -->
-                                    <div class="single-blog-wrap">
-                                        <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-1.jpg"
-                                                                            alt="Blog"/></a>
-                                            <figcaption class="blog-icon">
-                                                <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
-                                            </figcaption>
-                                        </figure>
-
-                                        <div class="blog-details">
-                                            <h3><a href="single-blog.html">Mirum est notare quam</a></h3>
-                                            <div class="post-meta">
-                                                <a href="single-blog.html">20 June, 2022</a>
-                                                <a href="single-blog.html">Post By: Tuntuni</a>
-                                            </div>
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram
-                                                anteposuerit litterarum.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recent Post End -->
-
-                                    <!-- Single Recent Post Start -->
-                                    <div class="single-blog-wrap">
-                                        <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-2.jpg"
-                                                                            alt="Blog"/></a>
-                                            <figcaption class="blog-icon">
-                                                <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
-                                            </figcaption>
-                                        </figure>
-
-                                        <div class="blog-details">
-                                            <h3><a href="single-blog.html">Headsets You Can Buy Right</a></h3>
-                                            <div class="post-meta">
-                                                <a href="single-blog.html">20 June, 2022</a>
-                                                <a href="single-blog.html">Post By: Tuntuni</a>
-                                            </div>
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-                                                anteposuerit
-                                                litterarum.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recent Post End -->
-
-                                    <!-- Single Recent Post Start -->
-                                    <div class="single-blog-wrap">
-                                        <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-3.jpg"
-                                                                            alt="Blog"/></a>
-                                            <figcaption class="blog-icon">
-                                                <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
-                                            </figcaption>
-                                        </figure>
-
-                                        <div class="blog-details">
-                                            <h3><a href="single-blog.html">Headsets You Can Buy Right</a></h3>
-                                            <div class="post-meta">
-                                                <a href="single-blog.html">20 June, 2022</a>
-                                                <a href="single-blog.html">Post By: Tuntuni</a>
-                                            </div>
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-                                                anteposuerit
-                                                litterarum.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recent Post End -->
-
-                                    <!-- Single Recent Post Start -->
-                                    <div class="single-blog-wrap">
-                                        <figure class="blog-thumb">
-                                            <a href="single-blog.html"><img src="assets_fontend/img/blog-thumb-4.jpg"
-                                                                            alt="Blog"/></a>
-                                            <figcaption class="blog-icon">
-                                                <a href="single-blog.html"><i class="fa fa-file-image-o"></i></a>
-                                            </figcaption>
-                                        </figure>
-
-                                        <div class="blog-details">
-                                            <h3><a href="single-blog.html">Headsets You Can Buy Right</a></h3>
-                                            <div class="post-meta">
-                                                <a href="single-blog.html">20 June, 2022</a>
-                                                <a href="single-blog.html">Post By: Tuntuni</a>
-                                            </div>
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram,
-                                                anteposuerit
-                                                litterarum.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recent Post End -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Recent Post Area End -->
-
-            <!-- Client Reviews Area Start -->
-            <div class="col-lg-5">
-                <div class="client-says-area-wrap">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="section-title">
-                                <h2>Client Says</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="reviews-content">
-                                <div class="reviews-carousel owl-carousel">
-                                    <!-- Single Reviews Start -->
-                                    <div class="single-reviews">
-                                        <a href="#" class="client-thumb">
-                                            <img src="assets_fontend/img/client-1.jpg" alt="Cliebt"/>
-                                        </a>
-                                        <a href="#" class="client-name">Stefano Colombarolli <span
-                                                class="client-designation">Akamla Manager</span></a>
-
-                                        <p class="client-quote">All Perfect !! I have three sites with magento , this
-                                            theme is the best !! Excellent support , advice theme installation package ,
-                                            sorry for English, are Italian but I had no problem !! Thank you !</p>
-                                    </div>
-                                    <!-- Single Reviews End -->
-
-                                    <!-- Single Reviews Start -->
-                                    <div class="single-reviews">
-                                        <a href="#" class="client-thumb">
-                                            <img src="assets_fontend/img/client-2.jpg" alt="Cliebt"/>
-                                        </a>
-                                        <a href="#" class="client-name">Alex Tuntuni <span class="client-designation">Product Manager</span></a>
-
-                                        <p class="client-quote">All Perfect !! I have three sites with magento , this
-                                            theme is the best !! Excellent support , advice theme installation package ,
-                                            sorry for English, are Italian but I had no problem !! Thank you !</p>
-                                    </div>
-                                    <!-- Single Reviews End -->
-
-                                    <!-- Single Reviews Start -->
-                                    <div class="single-reviews">
-                                        <a href="#" class="client-thumb">
-                                            <img src="assets_fontend/img/client-3.jpg" alt="Cliebt"/>
-                                        </a>
-                                        <a href="#" class="client-name">Stefano Colombarolli <span
-                                                class="client-designation">Akamla Manager</span></a>
-
-                                        <p class="client-quote">All Perfect !! I have three sites with magento , this
-                                            theme is the best !! Excellent support , advice theme installation package ,
-                                            sorry for English, are Italian but I had no problem !! Thank you !</p>
-                                    </div>
-                                    <!-- Single Reviews End -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Client Reviews Area End -->
-        </div>
-    </div>
-</div>
 <!--== End Recent Post & Reviews Area ==-->
 
 <!--== Start Brand Carousel Area ==-->
@@ -1311,3 +1179,12 @@
     </div>
 </div>
 <!--== End Brand Carousel Area ==-->
+<script>
+        function confirmDesactiv()
+{
+   if(alert('Chúc mừng bạn đã thêm vào dỏ hàng thành công.'))
+     return true;
+  
+  return false;
+}
+</script>

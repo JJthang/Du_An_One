@@ -168,6 +168,8 @@
         $id_pro =  $_POST['idpro'];
         $date_bl = date('h:i:sa d/m/Y');
         insert_binhluan($content_bl,$id_user,$id_pro,$date_bl,$name_user,$role_tk);
-        header("location: ".$_SERVER['HTTP_REFERER']);
+        $yourURL="http://localhost/Du_An_1/back_end/matrix-admin-master/index.php?act=sanphamct&id_sp=".$id_pro;
+            echo ("<script>location.href='$yourURL'</script>");
+        // header('location: index.php?act=sanphamct');
      }
 ?>

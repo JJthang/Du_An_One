@@ -122,70 +122,10 @@
                 <!-- Search Box Area End -->
 
                 <!-- Mini Cart Area Start -->
-                <div class="col-12 col-md-3 col-xl-2 m-auto text-center text-lg-right mt-xs-15">
-                    <div class="minicart-wrapper">
-                        <button class="btn btn-minicart">My Cart <sup class="cart-count">3</sup></button>
-                        <div class="minicart-content">
-                            <div class="mini-cart-body">
-                                <!-- Single Cart Item Start -->
-                                <div class="single-cart-item d-flex">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-1.jpg"
-                                                                           alt="Products"/></a>
-                                    </figure>
-
-                                    <div class="product-details">
-                                        <h2><a href="single-product.html">Sprite Yoga Companion</a></h2>
-                                        <div class="cal d-flex align-items-center">
-                                            <span class="quantity">3</span>
-                                            <span class="multiplication">X</span>
-                                            <span class="price">$77.00</span>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="remove-icon"><i class="fa fa-trash-o"></i></a>
-                                </div>
-                                <!-- Single Cart Item End -->
-
-                                <!-- Single Cart Item Start -->
-                                <div class="single-cart-item d-flex">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-2.jpg"
-                                                                           alt="Products"/></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2><a href="single-product.html">Yoga Companion Kit</a></h2>
-                                        <div class="cal d-flex align-items-center">
-                                            <span class="quantity">2</span>
-                                            <span class="multiplication">X</span>
-                                            <span class="price">$6.00</span>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="remove-icon"><i class="fa fa-trash-o"></i></a>
-                                </div>
-                                <!-- Single Cart Item End -->
-
-                                <!-- Single Cart Item Start -->
-                                <div class="single-cart-item d-flex">
-                                    <figure class="product-thumb">
-                                        <a href="single-product.html"><img src="assets_fontend/img/product-3.jpg"
-                                                                           alt="Products"/></a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h2><a href="#">Sprite Yoga Companion Kit</a></h2>
-                                        <div class="cal d-flex align-items-center">
-                                            <span class="quantity">1</span>
-                                            <span class="multiplication">X</span>
-                                            <span class="price">$116.00</span>
-                                        </div>
-                                    </div>
-                                    <a href="single-product.html" class="remove-icon"><i class="fa fa-trash-o"></i></a>
-                                </div>
-                                <!-- Single Cart Item End -->
-                            </div>
-                            <div class="mini-cart-footer">
-                                <a href="checkout.html" class="btn">Checkout</a>
-                            </div>
-                        </div>
+                <div class="col-12 col-md-3 col-xl-2 m-auto text-center text-lg-right mt-xs-15" style="width: 220px">
+                    <div class="minicart-wrapper" style="display: flex;">
+                        <a href="index.php?act=dohang"><button class="btn btn-minicart" style="margin-left: -30px; width: 140px; height: 70px;">Giỏ Hàng</button></a>
+                        <a href="index.php?act=load_bill"><button class="btn btn-minicart" style="margin-left: 40px; width: 140px; height: 70px;">Đơn hàng</button></a>
                     </div>
                 </div>
                 <!-- Mini Cart Area End -->

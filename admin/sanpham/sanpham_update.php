@@ -69,9 +69,9 @@
            </div>
             <div class="chucnang">
             <input type="hidden" name="id_sp" value="<?=$id_sp?>">
-            <input type="submit" name="capnhat" id="" value="Cập nhật">
-                <a href="index.php?act=listsp" style="padding-left: 10px;">
-                    <input type="button" id="" value="Danh sách">
+            <input type="submit" name="capnhat" id="" value="Cập nhật" style="background-color: #7460ee; border-color:#7460ee; color: white; border-radius: 2px; width: 85px; height: 35px; cursor: pointer;" >
+                <a href="index.php?act=listsp" style="padding-left: 10px;" >
+                    <input type="button" id="" value="Danh sách" style="color: #fff;background-color: #6c757d;border-color: #6c757d; border-radius: 2px; width: 85px; height: 35px; cursor: pointer;">
                 </a>
             </div>
             <?php 

@@ -4,8 +4,8 @@
         </div>
         <div class="khung_list_sp" style="width: 100%;height: 3000px;">
             <div class="xuatsp" style="width: 100%; height: 800px;">
-            <table border="1px" style="width: 100%; height: 40%; text-align: center;">
-                        <tr >
+            <table style="width: 100%; height: 40%; text-align: center;">
+                        <tr style="border-bottom: 1px solid #B2B2B2; background-color: #ced3d894;">
                             <th></th>
                             <th>MÃ TÀI KHOẢN</th>
                             <th>TÊN TÀI KHOẢN</th>
@@ -13,8 +13,7 @@
                             <th>EMAIL TÀI KHOẢN</th>
                             <th>ADDRESS TÀI KHOẢN</th>
                             <th>SỐ ĐIỆN THOẠI</th>
-                            <input type="text"  >
-
+                            <th></th>
                         </tr>
                         <?php 
                             foreach ($xuattk as $key) {
@@ -22,7 +21,7 @@
                                 $sua_tk = "index.php?act=sua_tk&id_tk=".$id_tk;
                                 $xoa_tk = "index.php?act=xoa_tk&id_tk=".$id_tk;
                                 echo '
-                                <tr>
+                                <tr style="border-bottom: 1px solid #B2B2B2;">
                                 <td><input type="checkbox" name="" id=""></td>
                                 <td> ' . $id_tk.'</td>
                                 <td>' . $name_tk .'</td>
@@ -30,7 +29,14 @@
                                 <td>' . $email_tk .'</td>
                                 <td>' . $address_tk .'</td>
                                 <td>' . $tel_tk .'</td>
-                                <td><a href="'.$sua_tk.'"><input type="button" value="Sửa" class="check"></a> <a href="'.$xoa_tk.'" ><input Onclick="return confirmDesactiv()" type="button" value="Xóa" class="check"></a></td>
+                                <td>
+                                <a href="'.$sua_tk.'">
+                                <input type="button" value="Sửa" class="check"  style="color: #fff;background-color: #28b779;border-color: #28b779; border-radius: 2px; width: 60px; height: 35px; cursor: pointer;>
+                                </a> 
+                                <a href="'.$xoa_tk.'" >
+                                <input style="color: #fff;background-color: #da542e;border-color: #da542e; border-radius: 2px; width: 60px; height: 35px; cursor: pointer; Onclick="return confirmDesactiv()" type="button" value="Xóa" class="check" >
+                                </a>
+                                </td>
                             </tr>
                                 ';
                             }

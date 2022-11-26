@@ -49,9 +49,9 @@
             </div>
             <div class="chucnang">
             <input type="hidden" name="id_tk" value="<?=$id_tk?>">
-            <input type="submit" name="capnhat" id="" value="Cập nhật">
+            <input type="submit" name="capnhat" id="" value="Cập nhật" style="color: #fff;background-color: #7460ee;border-color: #7460ee; border-radius: 2px; width: 80px; height: 35px; cursor: pointer;">
                 <a href="index.php?act=listtk" style="padding-left: 10px;">
-                    <input type="button" id="" value="Danh sách">
+                    <input type="button" id="" value="Danh sách" style="color: #fff;background-color: #6c757d;border-color: #6c757d; border-radius: 2px; width: 80px; height: 35px; cursor: pointer;">
                 </a>
             </div>
             <?php
