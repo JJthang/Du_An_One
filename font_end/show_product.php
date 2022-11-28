@@ -373,6 +373,7 @@
                                      foreach ($spnew2 as $key) {
                                         extract($key);
                                         $hinh = "upload/".$img_sp;
+                                        $format_number_1 = number_format($price_sp);
                                         $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
                                         echo '
                                         <div class="col-lg-4 col-sm-6">
@@ -385,7 +386,7 @@
                                                         class="fa fa-eye"></i></a>
                                             </figure>
                                             <div class="product-details">
-                                                <h2 class="product-title"><a href="single-product.html">'.$name_sp.'</a></h2>
+                                                <h2 class="product-title"><a href="'.$linksp.'">'.$name_sp.'</a></h2>
                                                 <div class="rating">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
@@ -393,18 +394,31 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                                <span class="product-price">'.$price_sp.' Đ</span>
+                                                <span class="product-price">'.$format_number_1.' Đ</span>
     
                                                 <p class="pro-desc">'.$mota_sp.'</p>
     
                                                 <div class="product-meta">
-                                                    <a href="#" class="btn btn-round btn-cart" title="Add to Cart"><i
-                                                            class="fa fa-shopping-cart"></i></a>
-                                                    <a href="wishlist.html" class="btn btn-round btn-cart"
-                                                       title="Add to Wishlist"><i class="fa fa-heart"></i></a>
-                                                    <a href="compare.html" class="btn btn-round btn-cart"
-                                                       title="Add to Compare"><i class="fa fa-exchange"></i></a>
-                                                </div>
+                                          <form action="index.php?act=cart" method="post">
+                                          <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                          <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                          <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                          <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          border: none;
+                                          color: #fff;
+                                          font-weight: 600;
+                                          line-height: 1.2;
+                                          margin: 0;
+                                          padding: 10px 25px;
+                                          text-transform: uppercase;
+                                          outline: none;
+                                          border-radius: 0;
+                                          font-size: 1.4rem;
+                                          margin-left: 55px;
+                                          ">
+                                           </form>
+                                          </div>
                                             </div>
                                         </div>
                                     </div>

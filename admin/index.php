@@ -175,10 +175,24 @@
                 $list_bill = load_all_bill1($kwn,0);
                 include 'bill/list_bill.php';
                 break;
+            case 'xoabill':
+                if (isset($_GET['id_bill']) && ($_GET['id_bill'] > 0)) {
+                    delete_bill($_GET['id_bill']);
+                    delete_bill1($_GET['id_bill']);
+                }
+                if (isset($_POST['kwn']) && ($_POST['kwn'] != "" )) {
+                    $kwn = $_POST['kwn'];
+                }else{
+                    $kwn = "";
+                }
+                $list_bill = load_all_bill1($kwn,0);
+                include "bill/list_bill.php";
+                break;
             case 'suabill':
                 if (isset($_GET['id_bill']) && ($_GET['id_bill'])) {
                     $bill = load_one_bill($_GET['id_bill']);
                 }
+                $xem_sp_cua_don_hang = lay_sp_theo_id_bill($_GET['id_bill']);
                 include "bill/sua_bill.php";
             break;
             case 'update_bill':

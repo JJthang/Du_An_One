@@ -60,9 +60,19 @@
         if ($kwn != "") {
             $sql .=" AND id_bill like '%". $kwn."%'";
         }
-        $sql .=" order by id_bill";
+        $sql .=" order by id_bill desc";
             $list_bill = pdo_query($sql);  
             return $list_bill;
+    }
+    function delete_bill($id)
+    {
+        $sql = "DELETE from cart where id_bill = ".$id;
+        pdo_query($sql);
+    }
+    function delete_bill1($id)
+    {
+        $sql = "DELETE from bill where id_bill = ".$id;
+        pdo_query($sql);
     }
     function get_ttdh($trangthai){
         switch ($trangthai) {

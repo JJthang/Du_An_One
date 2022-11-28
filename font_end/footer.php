@@ -1,38 +1,4 @@
 
-<div class="newsletter-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 m-auto">
-                <!-- Newsletter Content Start -->
-                <div class="newsletter-content-wrap text-center text-lg-left d-lg-flex">
-                    <h2><i class="fa fa-envelope-square"></i> Sign up for Newsletter</h2>
-                    <div class="newsletter-form-wrap">
-                        <form id="subscribe-form" action="https://htmlmail.hasthemes.com/raju/tienda-subscribe.php"
-                              method="post">
-                            <input type="email" name="newsletter_email" id="address"
-                                   placeholder="Enter Your Email Address" required/>
-                            <button class="btn" type="submit">Subscribe</button>
-                        </form>
-                        <!-- Show Error & Success Message -->
-                        <div id="subscribeResult"></div>
-                    </div>
-                </div>
-                <!-- Newsletter Content End -->
-            </div>
-
-            <div class="col-lg-3 m-auto text-center text-lg-right">
-                <!-- Social Icons Area Start -->
-                <div class="social-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-youtube"></i></a>
-                </div>
-                <!-- Social Icons Area End -->
-            </div>
-        </div>
-    </div>
-</div>
 <!--== End Newsletter Area ==-->
 
 <!--== Start Footer Area ==-->

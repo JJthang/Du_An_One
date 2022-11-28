@@ -10,6 +10,11 @@
         $sql = "DELETE from sanpham where id_sp = ".$id;
         pdo_query($sql);
     }
+    function lay_sp_theo_id_bill($id_bill){
+        $sql = "select * from cart where id_bill=".$id_bill;
+            $listsanpham= pdo_query($sql);
+            return $listsanpham;
+    }
     function load_sp_top6()
     {
         $sql = "select * from sanpham where 1 order by view desc limit 0,6";

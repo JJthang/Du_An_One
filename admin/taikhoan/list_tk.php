@@ -31,7 +31,7 @@
                                 <td>' . $tel_tk .'</td>
                                 <td>
                                 <a href="'.$sua_tk.'">
-                                <input type="button" value="Sửa" class="check"  style="color: #fff;background-color: #28b779;border-color: #28b779; border-radius: 2px; width: 60px; height: 35px; cursor: pointer;>
+                                <input type="button" value="Sửa" class="check"  style="color: #fff;background-color: #28b779;border-color: #28b779; border-radius: 2px; width: 60px; height: 35px; cursor: pointer;">
                                 </a> 
                                 <a href="'.$xoa_tk.'" >
                                 <input style="color: #fff;background-color: #da542e;border-color: #da542e; border-radius: 2px; width: 60px; height: 35px; cursor: pointer; Onclick="return confirmDesactiv()" type="button" value="Xóa" class="check" >

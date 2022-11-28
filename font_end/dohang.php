@@ -28,13 +28,14 @@
                                 foreach ($_SESSION['mua_cart'] as $cart) {
                                     $hinh = "upload/".$cart[2];
                                     $ttien = $cart[3] * $cart[4];
+                                    $format_number_1 = number_format($cart[3]);
                                     $xoa_cart = '<a href="index.php?act=delete_cart&idcart='.$i.'"><input type="button" value="Xóa"></a>';
                                     echo '
                                     <tr>
                                     <td class="pro-thumbnail"><img class="img-fluid" src="'.$hinh.'"
                                                                        alt="Product"/></td>
                                     <td class="pro-title">'.$cart[1].'</td>
-                                    <td class="pro-price"><span>$'.$cart[3].'</span></td>
+                                    <td class="pro-price"><span>'.$format_number_1.'Đ</span></td>
                                     <td class="pro-quantity">
                                     <div class="pro-qty">
                                     <p>'.$cart[4].'</p>
@@ -81,20 +82,24 @@
                             <table class="table table-bordered">
                             <?php
                                 $tongtien = 0;
+                                $format_number_1 = 0;
                             foreach ($_SESSION['mua_cart'] as $cart) {
+                                
                                 $ttien = $cart[3] * $cart[4];
                                 $tongtien += $ttien;
+                                $format_number_1 = number_format($tongtien);
+                                $format_number_2 = number_format($cart[3]);
                                 echo '
                                 <tr>
                                     <td>'.$cart[1].'</td>
-                                    <td>'.$cart[3].'</td>
+                                    <td>'.$format_number_2.'</td>
                                 </tr>
                                 ';
                             }
                             echo '
                             <tr>
                                 <td>Tổng tiền</td>
-                                <td class="total-amount">$'.$tongtien.'</td>
+                                <td class="total-amount">'.$format_number_1.'Đ</td>
                             </tr>
                             ';
                             ?>
@@ -110,40 +115,6 @@
 <!--== Page Content Wrapper End ==-->
 
 <!--== Start Newsletter Area ==-->
-<div class="newsletter-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 m-auto">
-                <!-- Newsletter Content Start -->
-                <div class="newsletter-content-wrap text-center text-lg-left d-lg-flex">
-                    <h2><i class="fa fa-envelope-square"></i> Sign up for Newsletter</h2>
-                    <div class="newsletter-form-wrap">
-                        <form id="subscribe-form" action="https://htmlmail.hasthemes.com/raju/tienda-subscribe.php"
-                              method="post">
-                            <input type="email" name="newsletter_email" id="address"
-                                   placeholder="Enter Your Email Address" required/>
-                            <button class="btn" type="submit">Subscribe</button>
-                        </form>
-                        <!-- Show Error & Success Message -->
-                        <div id="subscribeResult"></div>
-                    </div>
-                </div>
-                <!-- Newsletter Content End -->
-            </div>
-
-            <div class="col-lg-3 m-auto text-center text-lg-right">
-                <!-- Social Icons Area Start -->
-                <div class="social-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-youtube"></i></a>
-                </div>
-                <!-- Social Icons Area End -->
-            </div>
-        </div>
-    </div>
-</div>
 <!--== End Newsletter Area ==-->
 <script>
     function confirmDesactiv()

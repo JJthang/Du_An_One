@@ -25,6 +25,33 @@
                     <input type="button" id="" value="Danh sách" style="color: #fff;background-color: #da542e;border-color: #da542e; border-radius: 2px; width: 80px; height: 35px; cursor: pointer;">
                 </a>
             </div>
+            <div class="xuatsp" style="width: 100%; height: 800px;">
+            <table  style="width: 100%; height: 50%; text-align: center;">
+                        <tr style="border-bottom: 1px solid #B2B2B2; background-color: #ced3d894;">
+                            <th></th>
+                            <th>MÃ ĐƠN HÀNG</th>
+                            <th>TÊN SẢN PHẨM</th>
+                            <th>GIÁ SẢN PHẨM</th>
+                            <th>SỐ LƯỢNG</th>
+                        </tr>
+                        <?php 
+                            foreach ($xem_sp_cua_don_hang as $key) {
+                                extract($key);
+                                echo '
+                                <tr style="border-bottom: 1px solid #B2B2B2;">
+                                <td><input type="checkbox" name="" id=""></td>
+                                <td> ' . $key["id_cart"].'</td>
+                                <td>' . $key["name"] .'</td>
+                                <td>' . $key["price"] .'</td>
+                                <td>' . $key["soluong"] .'</td>                                
+                                
+                            </tr>
+                                ';
+                            }
+                        ?>
+                        
+                    </table>
+            </div>
             <?php 
             if (isset($thongbao) && $thongbao != "") {
                 echo $thongbao;

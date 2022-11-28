@@ -68,20 +68,23 @@
                             <table class="table table-bordered">
                             <?php
                                 $tongtien = 0;
+                                $format_number_1 = 0;
                             foreach ($_SESSION['mua_cart'] as $bill) {
                                 $ttien = $bill[3] * $bill[4];
                                 $tongtien += $ttien;
+                                $format_number_1 = number_format($tongtien);
+                                $format_number_2 = number_format($bill[3]);
                                 echo '
                                 <tr>
                                     <td>'.$bill[1].'</td>
-                                    <td>'.$bill[3].'</td>
+                                    <td>'.$format_number_2.'</td>
                                 </tr>
                                 ';
                             }
                             echo '
                             <tr>
                                 <td>Tổng tiền</td>
-                                <td class="total-amount">$'.$tongtien.'</td>
+                                <td class="total-amount">'.$format_number_1.'Đ</td>
                             </tr>
                             ';
                             ?>

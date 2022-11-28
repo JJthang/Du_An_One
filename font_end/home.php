@@ -143,6 +143,7 @@
                                             extract($key);
                                             $hinh = "upload/".$img_sp;
                                             $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                            $format_number_1 = number_format($price_sp);
                                             echo '
                                             <div class="single-product-item">
                                         <figure class="product-thumb">
@@ -162,7 +163,7 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                             </div>
-                                            <span class="product-price">$' . $price_sp . '</span>
+                                            <span class="product-price">' . $format_number_1 . 'Đ</span>
 
                                             <div class="product-meta">
                                                 <form action="index.php?act=cart" method="post">
@@ -708,6 +709,7 @@
                                         
                                         $hinh = "upload/".$img_sp;
                                         $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
+                                        $format_number_1 = number_format($price_sp);
                                       echo '
                                       <div class="single-product-item">
                                       <figure class="product-thumb">
@@ -725,7 +727,7 @@
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
                                           </div>
-                                          <span class="product-price">$'. $price_sp .'</span>
+                                          <span class="product-price">'. $format_number_1 .'Đ</span>
   
                                           <div class="product-meta">
                                           <form action="index.php?act=cart" method="post">
@@ -777,6 +779,7 @@
                                 <?php
                                 foreach ($spnew4 as $key) {
                                         extract($key);
+                                        $format_number_1 = number_format($price_sp);
                                         
                                         $hinh = "upload/".$img_sp;
                                         $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
@@ -799,7 +802,7 @@
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
                                           </div>
-                                          <span class="product-price">$'. $price_sp .'</span>
+                                          <span class="product-price">'. $format_number_1 .'Đ</span>
   
                                           <div class="product-meta">
                                           <form action="index.php?act=cart" method="post">
@@ -851,7 +854,7 @@
                                 <?php
                                 foreach ($spnew5 as $key) {
                                         extract($key);
-                                        
+                                        $format_number_1 = number_format($price_sp);
                                         $hinh = "upload/".$img_sp;
                                         $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
                                       echo '
@@ -871,7 +874,7 @@
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
                                           </div>
-                                          <span class="product-price">$'. $price_sp .'</span>
+                                          <span class="product-price">'. $format_number_1 .'Đ</span>
   
                                           <div class="product-meta">
                                           <form action="index.php?act=cart" method="post">
@@ -923,7 +926,7 @@
                                 <?php
                                 foreach ($spnew6 as $key) {
                                         extract($key);
-                                        
+                                        $format_number_1 = number_format($price_sp);
                                         $hinh = "upload/".$img_sp;
                                         $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
                                       echo '
@@ -943,7 +946,7 @@
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
                                           </div>
-                                          <span class="product-price">$'. $price_sp .'</span>
+                                          <span class="product-price">'. $format_number_1 .'Đ</span>
   
                                           <div class="product-meta">
                                           <form action="index.php?act=cart" method="post">
@@ -995,7 +998,7 @@
                                 <?php
                                 foreach ($spnew7 as $key) {
                                         extract($key);
-                                        
+                                        $format_number_1 = number_format($price_sp);
                                         $hinh = "upload/".$img_sp;
                                         $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
                                       echo '
@@ -1015,7 +1018,7 @@
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
                                           </div>
-                                          <span class="product-price">$'. $price_sp .'</span>
+                                          <span class="product-price">'. $format_number_1 .'Đ</span>
   
                                           <div class="product-meta">
                                           <form action="index.php?act=cart" method="post">
@@ -1067,7 +1070,7 @@
                                 <?php
                                 foreach ($spnew1 as $key) {
                                         extract($key);
-                                        
+                                        $format_number_1 = number_format($price_sp);
                                         $hinh = "upload/".$img_sp;
                                         $linksp = "index.php?act=sanphamct&id_sp=".$id_sp;
                                       echo '
@@ -1087,7 +1090,7 @@
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
                                           </div>
-                                          <span class="product-price">$'. $price_sp .'</span>
+                                          <span class="product-price">'. $format_number_1 .'Đ</span>
   
                                           <div class="product-meta">
                                           <form action="index.php?act=cart" method="post">
@@ -1108,7 +1111,7 @@
                                           font-size: 1.4rem;
                                           margin-left: 55px;
                                           ">
-                                       </form>
+                                           </form>
                                           </div>
                                       </div>
                                   </div>

@@ -68,15 +68,30 @@
                                 </div>
 
                                 <p class="products-desc"></p>
-                                <div class="product-quantity d-flex align-items-center">
-                                    <div class="quantity-field">
-                                        <label for="qty">Qty</label>
-                                        <input type="number" id="qty" min="1" max="100" value="1"/>
-                                    </div>
+                                <?php 
+                                echo '
+                                <form action="index.php?act=cart" method="post">
+                                                   <input type="hidden" name="id_sp" value="'.$id_sp.'">
+                                                   <input type="hidden" name="name_sp" value="'.$name_sp.'">
+                                                   <input type="hidden" name="img_sp" value="'.$img_sp.'">
+                                                   <input type="hidden" name="price_sp" value="'.$price_sp.'">
+                                                   <div class="product-quantity d-flex align-items-center">
 
-                                    <a href="cart.html" class="btn btn-cart-large"><i class="fa fa-shopping-cart"></i>
-                                        Add to Cart</a>
+                                <input type="submit" value="Thêm vào dỏ hàng" name="add_to_cart" style="    background-color: #73b320;
+                                    border: none;
+                                    color: #fff;
+                                    font-weight: 600;
+                                    line-height: 1.2;
+                                    margin: 0;
+                                    padding: 20px 25px;
+                                    text-transform: uppercase;
+                                    outline: none;
+                                    border-radius: 0;
+                                    font-size: 1.4rem;">
                                 </div>
+                                </form>
+                                ';
+                                ?>
 
                                 <div class="product-btn-group">
                                     <a href="wishlist.html" class="btn btn-round btn-cart"><i
@@ -100,7 +115,6 @@
                                     <a id="reviews-tab" data-bs-toggle="tab" href="#reviews">Reviews</a>
                                 </nav>
                                 <!-- Single Product tab Menu -->
-
                                 <!-- Single Product tab Content -->
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="description">
