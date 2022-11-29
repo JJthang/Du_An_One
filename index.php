@@ -161,6 +161,9 @@
                }
                include 'font_end/load_bill.php';
                break;
+            case 'about':
+               include "font_end/about.php";
+               break;
             default:
                      include "font_end/home.php";
                 break;

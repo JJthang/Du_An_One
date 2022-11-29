@@ -290,7 +290,7 @@
                         <nav class="mainmenu">
                             <ul class="main-navbar clearfix">
                                 <li class="dropdown-show"><a href="index.php?act=go_home" class="arrow-toggle">Trang chủ</a>
-                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="index.php?act=about">About Us</a></li>
                                 <li class="dropdown-show"><a href="index.php?act=show_product" class="arrow-toggle">Sản phẩm</a>
                                     <ul class="mega-menu-wrap dropdown-nav">
                                         <li class="mega-menu-item"><a href="shop.html" class="mega-item-title">
