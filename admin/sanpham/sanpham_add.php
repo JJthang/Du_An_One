@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="khung_add" style="height: 1350px;">
+    <div class="khung_add" style="height: 2550px;">
         <h1>Thêm mới sản phẩm</h1>
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
             <div class="danhmuc_sp" >
@@ -51,7 +51,7 @@
                      .create(document.querySelector('#ykien'))
                      .then( editor => {
                        editor.ui.view.editable.element.style.height = '800px';
-                       editor.ui.view.editable.element.style.width = '1200px';
+                       editor.ui.view.editable.element.style.width = '2000px';
                        } )
                      .catch(error =>  {
                         console.error(error)

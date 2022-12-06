@@ -94,7 +94,11 @@
                     }
                     $mota_sp = $_POST['mota_sp'];
                     insert_sanpham($name_sp,$img_sp, $price_sp,$mota_sp,$id_danhmuc);
-                    $thongbao = "Cập nhật thành công";
+                    $thongbao = "
+                    <script>
+                    alert('Thêm sản phẩm thành công!');
+                </script>
+                    ";
                     }
                     
                 }
@@ -132,6 +136,7 @@
             case 'xoasp':
                 if (isset($_GET['id_sp']) && ($_GET['id_sp'] > 0)) {
                     delete_sanpham($_GET['id_sp']);
+                    delete_danhmuc($_GET['id_danhmuc']);
                 }
                 $listsanpham = load_sanpham("", 0);
                 include "sanpham/sanpham_list.php";

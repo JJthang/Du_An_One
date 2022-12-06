@@ -40,7 +40,7 @@
                $sp_add_to_cart = [$id_sp,$name_sp,$img_sp,$price_sp,$soluong];
                array_push($_SESSION['mua_cart'],$sp_add_to_cart);
             }
-            include "font_end/show_product.php";
+            // include "font_end/show_product.php";
                 break;
             case 'go_home':
                include "font_end/home.php";

@@ -159,7 +159,6 @@
                                                 </div>
                                                 <span class="product-price">'.$format_number_1.' Đ</span>
     
-                                                <p class="pro-desc">'.$mota_sp.'</p>
     
                                                 <div class="product-meta">
                                           <form action="index.php?act=cart" method="post">

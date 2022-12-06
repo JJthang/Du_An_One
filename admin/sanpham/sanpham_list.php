@@ -5,7 +5,7 @@
         <div class="khung_list_title" style="width: 100%;height: 50px;">
             <h1>Danh sách sản phẩm</h1>
         </div>
-        <div class="khung_list_sp" style="width: 100%;height: 3000px;">
+        <div class="khung_list_sp" style="width: 100%;height: 6500px;">
             <div class="find_sp" style="width: 100%; height: 40px;">
                     <form action="index.php?act=listsp" method="post">
                                 <input type="text" name="timkiem" class="find_product">
@@ -25,7 +25,6 @@
             <div class="xuatsp" style="width: 100%; height: 800px;">
             <table border="1px" style="width: 100%; height: 40%; text-align: center;">
                         <tr >
-                            <th></th>
                             <th>MÃ SẢN PHẨM</th>
                             <th>TÊN SẢN PHẨM</th>
                             <th>ẢNH SẢN PHẨM</th>
@@ -46,7 +45,6 @@
                                 }
                                 echo '
                                 <tr>
-                                <td><input type="checkbox" name="" id=""></td>
                                 <td> ' . $id_sp.'</td>
                                 <td>' . $name_sp .'</td>
                                 <td>' . $img_sp .'</td>
