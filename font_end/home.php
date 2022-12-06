@@ -8,7 +8,7 @@
                             <h2>Canvas Gear</h2>
                             <h3>Rất nhiều mặt hàng chính hãng</h3>
                             <h4>Và phần quà đang chờ bạn</h4>
-                            <a href="single-product-carousel.html" class="btn">Mua ngay</a>
+                            <a href="index.php?act=show_product" class="btn">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                             <h2>Ajaira Mobile</h2>
                             <h3>Rất nhiều mặt hàng chính hãng</h3>
                             <h4>Và phần quà đang chờ bạn</h4>
-                            <a href="single-product-carousel.html" class="btn">Mua ngay</a>
+                            <a href="index.php?act=show_product" class="btn">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                             <h2>HasMobile</h2>
                             <h3>Rất nhiều mặt hàng chính hãng</h3>
                             <h4>Và phần quà đang chờ bạn</h4>
-                            <a href="single-product-carousel.html" class="btn">Mua ngay</a>
+                            <a href="index.php?act=show_product" class="btn">Mua ngay</a>
                         </div>
                     </div>
                 </div>

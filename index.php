@@ -224,13 +224,12 @@
                      $tendm = load_ten_dm($id);
                      include "font_end/sp_theo_dm.php";
                }
-
                      if (isset($_GET['id_danhmuc']) && ($_GET['id_danhmuc'] > 0)) {
                         $id = $_GET['id_danhmuc'];
                      }else{
                         $id = 0;
                      }
-                     $dssp = load_sanpham($kwy,$id);
+                     $dssp = load_sanpham($kwy = "",$id);
                      $tendm = load_ten_dm($id);
                      include "font_end/sp_theo_dm.php";
                      break;
