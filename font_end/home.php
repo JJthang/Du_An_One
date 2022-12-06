@@ -6,9 +6,9 @@
                     <div class="col-lg-12">
                         <div class="slider-text">
                             <h2>Canvas Gear</h2>
-                            <h3>With Dual Front Camera</h3>
-                            <h4>Can Smooth Beautiful Images</h4>
-                            <a href="single-product-carousel.html" class="btn">Shop Now</a>
+                            <h3>Rất nhiều mặt hàng chính hãng</h3>
+                            <h4>Và phần quà đang chờ bạn</h4>
+                            <a href="single-product-carousel.html" class="btn">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -21,9 +21,9 @@
                     <div class="col-lg-12">
                         <div class="slider-text">
                             <h2>Ajaira Mobile</h2>
-                            <h3>With Dollbee Speaker</h3>
-                            <h4>Can Smooth Sound</h4>
-                            <a href="single-product-carousel.html" class="btn">Shop Now</a>
+                            <h3>Rất nhiều mặt hàng chính hãng</h3>
+                            <h4>Và phần quà đang chờ bạn</h4>
+                            <a href="single-product-carousel.html" class="btn">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -36,9 +36,9 @@
                     <div class="col-lg-12">
                         <div class="slider-text">
                             <h2>HasMobile</h2>
-                            <h3>With Dual Front Camera</h3>
-                            <h4>Can Smooth Beautiful Images</h4>
-                            <a href="single-product-carousel.html" class="btn">Shop Now</a>
+                            <h3>Rất nhiều mặt hàng chính hãng</h3>
+                            <h4>Và phần quà đang chờ bạn</h4>
+                            <a href="single-product-carousel.html" class="btn">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -60,8 +60,8 @@
                             <i class="fa fa-truck"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>Free Shipping</h4>
-                            <p>on order over $100</p>
+                            <h4>Miễn phí vận chuyển</h4>
+                            <p>trên đơn hàng trên 10tr</p>
                         </div>
                     </div>
                 </div>
@@ -74,8 +74,8 @@
                             <i class="fa fa-support"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>24/7 Support</h4>
-                            <p>Online consultations</p>
+                            <h4>Hỗ trợ 24/7</h4>
+                            <p>Tư vấn trực tuyến</p>
                         </div>
                     </div>
                 </div>
@@ -88,8 +88,8 @@
                             <i class="fa fa-calendar"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>Daily updates</h4>
-                            <p>Check out store</p>
+                            <h4>cập nhật hàng ngày</h4>
+                            <p>Kiểm tra cửa hàng</p>
                         </div>
                     </div>
                 </div>
@@ -102,8 +102,8 @@
                             <i class="fa fa-refresh"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>30-day Returns</h4>
-                            <p>oneyback guarantee</p>
+                            <h4>Đổi trả trong 30 ngày</h4>
+                            <p>đảm bảo hoàn tiền</p>
                         </div>
                     </div>
                 </div>
@@ -123,11 +123,9 @@
                     <!-- Product Tab Menu Start -->
                     <nav class="product-teb-menu">
                         <ul class="nav justify-content-center" role="tablist">
-                            <li><a class="active" href="#new-products" id="new-product-tab" data-bs-toggle="tab">New
-                                Products</a></li>
-                            <li><a href="#sale-products" id="sale-product-tab" data-bs-toggle="tab">OnSale</a></li>
-                            <li><a href="#feature-products" id="feature-product-tab" data-bs-toggle="tab">Feature
-                                Products</a></li>
+                            <li><a class="active" href="#new-products" id="new-product-tab" data-bs-toggle="tab">Sản phẩm mới</a></li>
+                            <!-- <li><a href="#sale-products" id="sale-product-tab" data-bs-toggle="tab">giảm giá</a></li>
+                            <li><a href="#feature-products" id="feature-product-tab" data-bs-toggle="tab">Sản phẩm nổi bật</a></li> -->
                         </ul>
                     </nav>
                     <!-- Product Tab Menu End -->
@@ -171,7 +169,7 @@
                                                    <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                                    <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                                    <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                                   <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                                   <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="THÊM VÀO GIỎ HÀNG" style="background-color: #73b320;
                                                    border: none;
                                                    color: #fff;
                                                    font-weight: 600;
@@ -735,7 +733,7 @@
                                           <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                           <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                           <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="THÊM VÀO GIỎ HÀNG" style="background-color: #73b320;
                                           border: none;
                                           color: #fff;
                                           font-weight: 600;
@@ -810,7 +808,7 @@
                                           <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                           <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                           <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="THÊM VÀO GIỎ HÀNG" style="background-color: #73b320;
                                           border: none;
                                           color: #fff;
                                           font-weight: 600;
@@ -882,7 +880,7 @@
                                           <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                           <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                           <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="THÊM VÀO GIỎ HÀNG" style="background-color: #73b320;
                                           border: none;
                                           color: #fff;
                                           font-weight: 600;
@@ -954,7 +952,7 @@
                                           <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                           <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                           <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="THÊM VÀO GIỎ HÀNG" style="background-color: #73b320;
                                           border: none;
                                           color: #fff;
                                           font-weight: 600;
@@ -1026,7 +1024,7 @@
                                           <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                           <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                           <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="THÊM VÀO GIỎ HÀNG" style="background-color: #73b320;
                                           border: none;
                                           color: #fff;
                                           font-weight: 600;
@@ -1098,7 +1096,7 @@
                                           <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                           <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                           <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào giỏ hàng" style="background-color: #73b320;
                                           border: none;
                                           color: #fff;
                                           font-weight: 600;

@@ -31,6 +31,8 @@
         </div>
 
         <form action="index.php?act=bill_confirm" method="post">
+                
+
           <div class="row">
             <!-- Checkout Billing Details -->
             <div class="col-lg-6">
@@ -109,7 +111,7 @@
                                 
                                        <tr>
                                            <td>'.$cart[1].' <strong> x 1</strong></td>
-                                           <td>$'.$cart[3].'</td>
+                                           <td>$'.number_format($cart[3]).'</td>
                                        </tr>
                                        </tbody>
                                         ';
@@ -118,7 +120,7 @@
                                     <tfoot>
                                      <tr>
                                     <td>Tổng tiền</td>
-                                    <td><strong>$'.$tongtien.'</strong></td>
+                                    <td><strong>$'.number_format($tongtien).'</strong></td>
                                     </tr>
                                     </tfoot>
                                     ';
@@ -152,12 +154,12 @@
                             </div>
                             <div class="summary-footer-area">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="terms" required/>
-                                    <label class="custom-control-label" for="terms">I have read and agree to the website
+                                    <input type="checkbox" class="custom-control-input" name="check" id="terms" required/>
+                                    <label class="custom-control-label" id="hello" for="terms">Tôi đã đọc và đồng ý với
                                         <a
-                                                href="index.html">terms and conditions.</a></label>
+                                                href="index.html">các điều khoản và điều kiện của trang web.</a></label>
                                 </div>
-
+                                
                                 <input type="submit" class="btn" value="Đặt hàng" name="dong_y_dat_hang">
                             </div>
                         </div>
@@ -170,3 +172,11 @@
     </div>
 </div>
 <!--== Page Content Wrapper End ==-->
+<script>
+    function confirmDesactiv()
+{
+   if (document.getElementById("terms").checked) {
+    alert("Đặt hàng thành công");
+   }
+}
+</script>

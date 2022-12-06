@@ -1,11 +1,14 @@
-<?php 
+<?php
+      
      session_start();
-     include "font_end/header.php";
      include "model/pdo.php";
      include "model/sanpham.php";
      include "global.php";
      include "model/taikhoan.php";
+     include "model/danh_muc.php";
      include "model/cart.php";
+     $danhmuc_all = load_danh_all();
+     include "font_end/header.php";
      $spnew = load_sp_home();
      $spnew1 = load_sp_home2();
      $spnew2 = load_sp_home1();
@@ -28,22 +31,20 @@
                   $sp_cung_loai =  sanpham_cungloai($id, $id_danhmuc);
                   include "font_end/detail.php";
               }
+              if (isset($_POST['add_to_cart']) && ($_POST['add_to_cart'])) {
+               $id_sp = $_POST['id_sp'];
+               $name_sp = $_POST['name_sp'];
+               $img_sp = $_POST['img_sp'];
+               $price_sp = $_POST['price_sp'];
+               $soluong = 1;
+               $sp_add_to_cart = [$id_sp,$name_sp,$img_sp,$price_sp,$soluong];
+               array_push($_SESSION['mua_cart'],$sp_add_to_cart);
+            }
+            include "font_end/show_product.php";
                 break;
             case 'go_home':
                include "font_end/home.php";
                break;
-            
-            case 'show_product':
-               if (isset($_GET["id_sp"]) && ($_GET['id_sp'] > 0)) {
-                  $id = $_GET['id_sp'];
-                  $one_sp = load_one_sanpham($id);
-                  extract($one_sp);
-                  $sp_cung_loai =  sanpham_cungloai($id, $id_danhmuc);
-                  include "font_end/detail.php";
-              }
-               include "font_end/show_product.php";
-               break;
-            
             case 'login':
 
                include "font_end/login-register.php";
@@ -81,6 +82,7 @@
                include "font_end/my-account.php";
                break;
             case 'changes':
+               
                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                   $name_tk = $_POST['name_tk'];
                   $pass_tk = $_POST['pass_tk'];
@@ -133,24 +135,45 @@
                   }else{
                      $id = 0;
                   }
-                  $name_bill = $_POST['name_tk'];
-                  $email_bill = $_POST['email_tk'];
-                  $address_bill = $_POST['address_tk'];
-                  $tel_bill = $_POST['tel_tk'];
-                  $ordernote_bill = $_POST['ordernote'];
-                  $pttt_bill = $_POST['paymentmethod'];
-                  $ngay_dat_hang = date('h:i:sa d/m/Y');
-                  $tongtien_bill = tong_donhang();
-
-                  $id_bill = insert_bill($userid,$name_bill,$email_bill,$address_bill,$tel_bill,$ordernote_bill,$tongtien_bill,$pttt_bill,$ngay_dat_hang);
-                  foreach ($_SESSION['mua_cart'] as $cart) {
-                     insert_cart($_SESSION['user']['id_tk'], $cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$id_bill);
+                  if ($_POST['name_tk'] == "" || $_POST['email_tk'] == "" || $_POST['address_tk'] == "" || $_POST['tel_tk'] == "") {
+                     echo '
+                     <script>
+                     function thongbao(){
+                      alert("Xin vui lòng nhập vào ô trống !");
+                     }
+                     thongbao();
+                     </script>
+                     ';
+                     include "font_end/dat_hang.php";
+                  }else{
+                     $name_bill = $_POST['name_tk'];
+                     $email_bill = $_POST['email_tk'];
+                     $address_bill = $_POST['address_tk'];
+                     $tel_bill = $_POST['tel_tk'];
+                     $ordernote_bill = $_POST['ordernote'];
+                     $pttt_bill = $_POST['paymentmethod'];
+                     $ngay_dat_hang = date('h:i:sa d/m/Y');
+                     $tongtien_bill = tong_donhang();
+   
+                     $id_bill = insert_bill($userid,$name_bill,$email_bill,$address_bill,$tel_bill,$ordernote_bill,$tongtien_bill,$pttt_bill,$ngay_dat_hang);
+                     foreach ($_SESSION['mua_cart'] as $cart) {
+                        insert_cart($_SESSION['user']['id_tk'], $cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$id_bill);
+                     }
+                     $_SESSION['mua_cart'] = [];
+                     $bill = load_one_bill($id_bill);
+                     $billct = load_all_cart($id_bill);
+                     echo '
+                     <script>
+                     function thongbao(){
+                      alert("Đặt hàng thành công !");
+                     }
+                     thongbao();
+                     </script>
+                     ';
+                     include "font_end/xac_nhan_don_hang.php";
                   }
-                  $_SESSION['mua_cart'] = [];
                }
-               $bill = load_one_bill($id_bill);
-               $billct = load_all_cart($id_bill);
-               include "font_end/xac_nhan_don_hang.php";
+               
                break;
 
             case'load_bill':
@@ -163,6 +186,68 @@
                break;
             case 'about':
                include "font_end/about.php";
+               break;
+            case 'show_product':
+                  if (isset($_GET["id_sp"]) && ($_GET['id_sp'] > 0)) {
+                     $id = $_GET['id_sp'];
+                     $one_sp = load_one_sanpham($id);
+                     extract($one_sp);
+                     $sp_cung_loai =  sanpham_cungloai($id, $id_danhmuc);
+                     include "font_end/detail.php";
+                 }
+                  include "font_end/show_product.php";
+                  break;
+            case 'load_sp':
+               if (isset($_POST['tim']) && ($_POST['tim'])) {
+                  if ($_POST['search'] == '') {
+                     echo '
+                     <script>
+                     function thongbao(){
+                      alert("Xin vui lòng nhập sản phẩm muốn tìm !");
+                     }
+                     thongbao();
+                     </script>
+                     ';
+                     include "font_end/home.php";
+                  }
+                  if (isset($_GET['id_danhmuc']) && ($_GET['id_danhmuc'] > 0)) {
+                     $id = $_GET['id_danhmuc'];
+                  }else{
+                     $id = 0;
+                  }
+                  if (isset($_POST['search']) && ($_POST['search'] != "")) {
+                     $kwy = $_POST['search'];
+                     }else{
+                     $kwy = "";
+                     }
+                     $dssp = load_sanpham($kwy,$id);
+                     $tendm = load_ten_dm($id);
+                     include "font_end/sp_theo_dm.php";
+               }
+
+                     if (isset($_GET['id_danhmuc']) && ($_GET['id_danhmuc'] > 0)) {
+                        $id = $_GET['id_danhmuc'];
+                     }else{
+                        $id = 0;
+                     }
+                     $dssp = load_sanpham($kwy,$id);
+                     $tendm = load_ten_dm($id);
+                     include "font_end/sp_theo_dm.php";
+                     break;
+            case 'timkiem':
+               // if (isset($_POST['search']) && ($_POST['search']) != "") {
+               //    $kwy = $_POST['search'];
+               // }else{
+               //    $kwy = "";
+               // }
+               // if (isset($_GET['id_danhmuc']) && ($_GET['id_danhmuc'] > 0)) {
+               //    $id = $_GET['id_danhmuc'];
+               // }else{
+               //    $id = "";
+               // }
+
+               // $dssp = load_sanpham($kwy,$id);
+               // $tendm = load_ten_dm($id);
                break;
             default:
                      include "font_end/home.php";

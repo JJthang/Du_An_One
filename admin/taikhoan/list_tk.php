@@ -6,7 +6,6 @@
             <div class="xuatsp" style="width: 100%; height: 800px;">
             <table style="width: 100%; height: 40%; text-align: center;">
                         <tr style="border-bottom: 1px solid #B2B2B2; background-color: #ced3d894;">
-                            <th></th>
                             <th>MÃ TÀI KHOẢN</th>
                             <th>TÊN TÀI KHOẢN</th>
                             <th>PASS TÀI KHOẢN</th>
@@ -22,7 +21,6 @@
                                 $xoa_tk = "index.php?act=xoa_tk&id_tk=".$id_tk;
                                 echo '
                                 <tr style="border-bottom: 1px solid #B2B2B2;">
-                                <td><input type="checkbox" name="" id=""></td>
                                 <td> ' . $id_tk.'</td>
                                 <td>' . $name_tk .'</td>
                                 <td>' . $pass_tk .'</td>

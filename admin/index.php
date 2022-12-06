@@ -1,3 +1,11 @@
+
+<!-- function confirmDesactiv()
+{
+   if(confirm("Bạn chắc chắn muốn xóa chứ ?"))
+     return true;
+  
+  return false;
+} -->
 <?php 
     include "../model/pdo.php";
     include "../model/danh_muc.php";
@@ -11,9 +19,20 @@
         switch ($act) {
             case 'adddm':
                 if (isset($_POST['themmoi'])&&($_POST['themmoi'])) {
-                    $tenloai = $_POST['tenloai'];
-                    insert_danhmuc($tenloai);
-                    $thongbao = "Thêm thành công";
+                    if ($_POST['tenloai'] == '') {
+                        echo '
+                        <script>
+                        function thongbao(){
+                         alert("Xin vui lòng nhập vào ô trống !");
+                        }
+                        thongbao();
+                        </script>
+                        ';
+                    }else{
+                        $tenloai = $_POST['tenloai'];
+                        insert_danhmuc($tenloai);
+                        $thongbao = "Thêm thành công";
+                    }
                 }
                 include "danhmuc/danhmuc_add.php";
                 break;
@@ -50,7 +69,19 @@
 
             case 'addsp':
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                    $name_sp = $_POST['name_sp'];
+                    $taget_div = "../upload/";
+                    $taget_file = $taget_div . basename($_FILES['img_sp']['name']);
+                    if ($_POST['name_sp'] == '' || $_POST['price_sp'] == '' || $_POST['id_danhmuc'] == '' || $taget_file == '' || $_POST['mota_sp'] == '') {
+                        echo '
+                        <script>
+                        function thongbao(){
+                         alert("Xin vui lòng nhập vào ô trống !");
+                        }
+                        thongbao();
+                        </script>
+                        ';
+                    }else{
+                        $name_sp = $_POST['name_sp'];
                     $price_sp = $_POST['price_sp'];
                     $id_danhmuc = $_POST['id_danhmuc'];
                     $img_sp = $_FILES['img_sp']['name'];
@@ -64,6 +95,8 @@
                     $mota_sp = $_POST['mota_sp'];
                     insert_sanpham($name_sp,$img_sp, $price_sp,$mota_sp,$id_danhmuc);
                     $thongbao = "Cập nhật thành công";
+                    }
+                    
                 }
                 $listDM = load_danh_all();
                 include "sanpham/sanpham_add.php";
@@ -71,8 +104,21 @@
             
             case 'listsp':
                 if (isset($_POST['list_find'])&&($_POST['list_find'])) {
-                    $kyw = $_POST['timkiem'];
-                    $id_danhmuc = $_POST['id_danhmuc'];
+                    if ($_POST['timkiem'] == "") {
+                        echo '
+                        <script>
+                        function thongbao(){
+                         alert("Xin vui lòng nhập vào ô trống !");
+                        }
+                        thongbao();
+                        </script>
+                        ';
+                        $kyw = $_POST['timkiem'];
+                        $id_danhmuc = $_POST['id_danhmuc'];
+                    }else{
+                        $kyw = $_POST['timkiem'];
+                        $id_danhmuc = $_POST['id_danhmuc'];
+                    }
                }
                else{
                     $kyw = '';
@@ -218,6 +264,10 @@
             case 'bieudo':
                 $list_tk1 = loadall_thongke_bieudo();
                 include "thongke/bieu_do.php";
+                break;
+            case 'doanhthu':
+                $list_tk_tien_thang = loadall_thongke_tien_thang();
+                include 'thongke/doanhthu.php';
                 break;
             default:
                 include "home.php";

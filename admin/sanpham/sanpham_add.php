@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="khung_add">
+    <div class="khung_add" style="height: 1350px;">
         <h1>Thêm mới sản phẩm</h1>
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
             <div class="danhmuc_sp" >
@@ -39,15 +39,29 @@
             <br>
             <input type="file" class="import" name="img_sp">
            </div>
-           <div class="Nhap_mota_sp">
+           <div class="Nhap_mota_sp" style="height: 50px !important;">
             <label for="">
                 Mô tả sản phẩm : 
                 <br>
-                <textarea name="mota_sp" id="" cols="165" rows="10"></textarea>
+                <textarea name="mota_sp" id="ykien"  cols="165" rows="30" ></textarea>
+                <script src="ckeditor5-build-classic/ckeditor.js">
+                 </script>
+                 <script>
+                     ClassicEditor
+                     .create(document.querySelector('#ykien'))
+                     .then( editor => {
+                       editor.ui.view.editable.element.style.height = '800px';
+                       editor.ui.view.editable.element.style.width = '1200px';
+                       } )
+                     .catch(error =>  {
+                        console.error(error)
+                     });
+                 </script> 
+
             </label>
            </div>
-            <div class="chucnang">
-            <input type="submit" name="themmoi" id="" value="Thêm mới" style="background-color: #7460ee; border-color:#7460ee; color: white; border-radius: 2px; width: 85px; height: 35px; cursor: pointer;" >
+            <div class="chucnang" style="margin-top: 750px;" > 
+            <input type="submit" name="themmoi" id="" value="Thêm mới" style="margin-top: 100px; background-color: #7460ee; border-color:#7460ee; color: white; border-radius: 2px; width: 85px; height: 35px; cursor: pointer;" >
                 <a href="index.php?act=listsp" style="padding-left: 10px;">
                     <input type="button" id="" value="Danh sách" style="color: #fff;background-color: #6c757d;border-color: #6c757d; border-radius: 2px; width: 85px; height: 35px; cursor: pointer;">
                 </a>

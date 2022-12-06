@@ -27,30 +27,32 @@
                 <div id="sidebar-area-wrap">
                     <!-- Single Sidebar Item Start -->
                     <div class="single-sidebar-wrap">
-                        <h2 class="sidebar-title">Shop By</h2>
+                        <h2 class="sidebar-title">Mua sắm</h2>
                         <div class="sidebar-body">
                             <div class="shopping-option d-block d-sm-flex d-lg-block">
                                 <div class="shopping-option-item">
-                                    <h4>MANUFACTURER</h4>
+                                    <h4>Tên sản phẩm</h4>
                                     <ul class="sidebar-list">
-                                        <li><a href="#">Dolce <span>(19)</span></a></li>
-                                        <li><a href="#">Gabbana <span>(4)</span></a></li>
-                                        <li><a href="#">Nike <span>(3)</span></a></li>
-                                        <li><a href="#">Nokia <span>(5)</span></a></li>
-                                        <li><a href="#">Xiaomi <span>(7)</span></a></li>
-                                        <li><a href="#">Other <span>(33)</span></a></li>
+                                    <?php 
+                                                    foreach ($danhmuc_all as $key) {
+                                                        extract($key);
+                                                        $link = "index.php?act=load_sp&id_danhmuc= ".$id_danhmuc;
+                                                        echo '
+                                                        <li><a href="'.$link.'">'.$name_danhmuc.'</a></li>
+                                                        ';
+                                                    }
+                                        ?>
                                     </ul>
                                 </div>
 
                                 <div class="shopping-option-item">
                                     <h4>Price</h4>
                                     <ul class="sidebar-list">
-                                        <li><a href="#">$0.00 - $9.99 <span>(2)</span></a></li>
-                                        <li><a href="#">$10.00 - $19.99 <span>(3)</span></a></li>
-                                        <li><a href="#">$20.00 - $29.99 <span>(5)</span></a></li>
-                                        <li><a href="#">$30.00 - $39.99 <span>(2)</span></a></li>
-                                        <li><a href="#">$40.00 - $49.99 <span>(10)</span></a></li>
-                                        <li><a href="#">$50.00 - $59.99 <span>(12)</span></a></li>
+                                        <li>10tr - 15tr <span>(3)</span></li>
+                                        <li>15tr - 20tr <span>(3)</span></li>
+                                        <li>20tr - 25tr <span>(3)</span></li>
+                                        <li>25tr - 30tr <span>(3)</span></li>
+                                        <li>30tr - 40tr <span>(3)</span></li>
                                     </ul>
                                 </div>
 
@@ -99,243 +101,6 @@
                     <!-- Single Sidebar Item End -->
 
                     <!-- Single Sidebar Item Start -->
-                    <div class="single-sidebar-wrap">
-                        <h2 class="sidebar-title">My Wishlist</h2>
-                        <div class="sidebar-body">
-                            <div class="product-small-list">
-                                <!-- Single Product Start -->
-                                <div class="single-pro-item d-flex">
-                                    <a href="single-product.html" class="product-thumb">
-                                        <img src="../assets_fontend/img/product-3.jpg" alt="Product"/>
-                                    </a>
-                                    <div class="pro-details">
-                                        <h2>
-                                            <a href="single-product.html">Compete Hoodie</a>
-                                        </h2>
-                                        <span class="pro-price">$30.33</span>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-pro-item d-flex">
-                                    <a href="single-product.html" class="product-thumb">
-                                        <img src="../assets_fontend/img/product-6.jpg" alt="Product"/>
-                                    </a>
-                                    <div class="pro-details">
-                                        <h2>
-                                            <a href="single-product.html">MH02-Gray</a>
-                                        </h2>
-                                        <span class="pro-price">$20.11</span>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-
-                                <!-- Single Product Start -->
-                                <div class="single-pro-item d-flex">
-                                    <a href="single-product.html" class="product-thumb">
-                                        <img src="../assets_fontend/img/product-5.jpg" alt="Product"/>
-                                    </a>
-                                    <div class="pro-details">
-                                        <h2>
-                                            <a href="single-product.html">Compete Hoodie</a>
-                                        </h2>
-                                        <span class="pro-price">$30.33</span>
-                                    </div>
-                                </div>
-                                <!-- Single Product End -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Sidebar Item End -->
-
-                    <!-- Single Sidebar Item Start -->
-                    <div class="single-sidebar-wrap">
-                        <h2 class="sidebar-title">MostViewed</h2>
-                        <div class="sidebar-body">
-                            <div class="sidebar-product-carousel owl-carousel">
-                                <div class="sidebar-carousel-item">
-                                    <div class="product-small-list">
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-1.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">Compete Hoodie</a>
-                                                </h2>
-                                                <span class="pro-price">$30.33</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-2.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">MH02-Gray</a>
-                                                </h2>
-                                                <span class="pro-price">$20.11</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-3.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">Compete Hoodie</a>
-                                                </h2>
-                                                <span class="pro-price">$30.33</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-4.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">MH02-Gray</a>
-                                                </h2>
-                                                <span class="pro-price">$20.11</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-carousel-item">
-                                    <div class="product-small-list">
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-1.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">Compete Hoodie</a>
-                                                </h2>
-                                                <span class="pro-price">$30.33</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-2.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">MH02-Gray</a>
-                                                </h2>
-                                                <span class="pro-price">$20.11</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-3.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">Compete Hoodie</a>
-                                                </h2>
-                                                <span class="pro-price">$30.33</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-4.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">MH02-Gray</a>
-                                                </h2>
-                                                <span class="pro-price">$20.11</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-                                    </div>
-                                </div>
-
-                                <div class="sidebar-carousel-item">
-                                    <div class="product-small-list">
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-1.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">Compete Hoodie</a>
-                                                </h2>
-                                                <span class="pro-price">$30.33</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-2.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">MH02-Gray</a>
-                                                </h2>
-                                                <span class="pro-price">$20.11</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-3.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">Compete Hoodie</a>
-                                                </h2>
-                                                <span class="pro-price">$30.33</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-
-                                        <!-- Single Product Start -->
-                                        <div class="single-pro-item d-flex">
-                                            <a href="single-product.html" class="product-thumb">
-                                                <img src="../assets_fontend/img/product-4.jpg" alt="Product"/>
-                                            </a>
-                                            <div class="pro-details">
-                                                <h2>
-                                                    <a href="single-product.html">MH02-Gray</a>
-                                                </h2>
-                                                <span class="pro-price">$20.11</span>
-                                            </div>
-                                        </div>
-                                        <!-- Single Product End -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Single Sidebar Item End -->
                 </div>
             </div>
@@ -350,19 +115,9 @@
                                 <li class="box-gird current"><i class="fa fa-th"></i></li>
                                 <li class="list"><i class="fa fa-list-ul"></i></li>
                             </ul>
-                            <span class="show-items">Items 1 - 9 of 17</span>
+                            <span class="show-items">Mục 1 - 9 trên 17</span>
                         </div>
 
-                        <div class="product-sort_by d-flex align-items-center mt-3 mt-md-0">
-                            <label for="sort">Sort By:</label>
-                            <select name="sort" id="sort">
-                                <option value="Position">Relevance</option>
-                                <option value="Name Ascen">Name, A to Z</option>
-                                <option value="Name Decen">Name, Z to A</option>
-                                <option value="Price Ascen">Price low to heigh</option>
-                                <option value="Price Decen">Price heigh to low</option>
-                            </select>
-                        </div>
                     </div>
 
                     <div class="shop-page-products-wrap">
@@ -404,7 +159,7 @@
                                           <input type="hidden" name="name_sp" value="'.$name_sp.'">
                                           <input type="hidden" name="img_sp" value="'.$img_sp.'">
                                           <input type="hidden" name="price_sp" value="'.$price_sp.'">
-                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="Thêm vào dỏ hàng" style="background-color: #73b320;
+                                          <input type="submit" onclick="confirmDesactiv()" name="add_to_cart" value="THÊM VÀO GIỎ HÀNG" style="background-color: #73b320;
                                           border: none;
                                           color: #fff;
                                           font-weight: 600;
@@ -441,7 +196,7 @@
                         </nav>
 
                         <div class="product-per-page d-flex align-items-center mt-3 mt-md-0">
-                            <label for="show-per-page">Show Per Page</label>
+                            <label for="show-per-page">Hiển thị mỗi trang</label>
                             <select name="sort" id="show-per-page">
                                 <option value="9">12</option>
                                 <option value="15">15</option>
@@ -459,3 +214,12 @@
 <!--== Page Content Wrapper End ==-->
 
 <!--== Start Newsletter Area ==-->
+<script>
+        function confirmDesactiv()
+{
+   if(alert('Chúc mừng bạn đã thêm vào giỏ hàng thành công.'))
+     return true;
+  
+  return false;
+}
+</script>

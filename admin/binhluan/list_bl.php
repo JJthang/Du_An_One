@@ -6,7 +6,6 @@
             <div class="xuatsp" style="width: 100%; height: 800px;">
             <table style="width: 100%; height: 60%; text-align: center;">
                         <tr style="border-bottom: 1px solid #B2B2B2; background-color: #ced3d894;">
-                            <th></th>
                             <th>ID_USER</th>
                             <th>CONTENT</th>
                             <th>ID_PRO</th>
@@ -20,7 +19,6 @@
                                 $xoasp = "index.php?act=xoabl&id_bl=".$id_bl;
                                 echo '
                                 <tr style="border-bottom: 1px solid #B2B2B2;">
-                                <td><input type="checkbox" name="" id=""></td>
                                 <td> ' . $id_bl.'</td>
                                 <td>' . $content_bl .'</td>
                                 <td>' . $id_pro .'</td>

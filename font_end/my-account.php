@@ -7,7 +7,7 @@
                 <div class="page-breadcrumb">
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html" class="active">Dashboard</a></li>
+                        <li><a href="shop.html" class="active">Bảng điều khiển</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,13 +28,13 @@
                         <div class="col-lg-3">
                             <div class="myaccount-tab-menu nav" role="tablist">
                                 <a href="#dashboad" class="active" data-bs-toggle="tab"><i class="fa fa-dashboard"></i>
-                                    Dashboard
+                                Bảng điều khiển
                                 </a>
-                                <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> address</a>
+                                <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> Địa chỉ</a>
 
-                                <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Account Details</a>
+                                <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Chi tiết tài khoản</a>
 
-                                <a href="index.php?act=log_out"><i class="fa fa-sign-out"></i> Logout</a>
+                                <a href="index.php?act=log_out"><i class="fa fa-sign-out"></i> Đăng xuất</a>
                             </div>
                         </div>
                         <!-- My Account Tab Menu End -->
@@ -45,7 +45,7 @@
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3>Dashboard</h3>
+                                        <h3>Bảng điều khiển</h3>
 
                                         <?php 
                                             if (isset($_SESSION['user'])) {
@@ -169,7 +169,7 @@
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade" id="address-edit" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3>Billing Address</h3>
+                                        <h3>Địa chỉ thanh toán</h3>
 
                                         <address>
                                             <p><strong>Alex Tuntuni</strong></p>
@@ -187,7 +187,7 @@
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade" id="account-info" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3>Account Details</h3>
+                                        <h3>Chi tiết tài khoản</h3>
                                         <div class="account-details-form">
                                             <form action="index.php?act=changes" method="post">
                                             <?php 

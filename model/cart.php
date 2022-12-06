@@ -77,16 +77,16 @@
     function get_ttdh($trangthai){
         switch ($trangthai) {
             case '0':
-                $tt = "Đơn hàng mới";
+                $tt = "Đơn hàng mới&chưa thanh toán";
                 break;
             case '1':
-                $tt = "Đang sử lý";
+                $tt = "Đang sử lý&chưa thanh toán";
                 break;
             case '2':
-                $tt = "Đang giao hàng";
+                $tt = "Đang giao hàng&chưa thanh toán";
                 break;
             case '3':
-                $tt = "Giao thành công";
+                $tt = "Giao thành công&đã thanh toán";
                 break;
             default:
                 $tt = "Đơn hàng mới";
@@ -108,5 +108,11 @@
         $sql .=" group by cart.idpro order by sanpham.id_sp desc";
             $list_tk = pdo_query($sql);  
             return $list_tk;
+    }
+    function loadall_thongke_tien_thang()
+    {
+        $sql = "select * from bill";
+        $list_tk = pdo_query($sql);  
+        return $list_tk;
     }
 ?>

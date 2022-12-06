@@ -93,6 +93,16 @@
             return "";
         }
     }
+    function load_ten_dm($id){
+        if ($id > 0) {
+        $sql = "select * from danhmuc where id_danhmuc = ".$id;
+        $dm = pdo_query_one($sql);
+        extract($dm);
+        return $name_danhmuc;
+        }else{
+            return "";
+        }
+    }
     function sanpham_cungloai($id,$id_danhmuc)
     {
         $sql = "SELECT * from sanpham where id_danhmuc = ". $id_danhmuc ." AND id_sp <>". $id;

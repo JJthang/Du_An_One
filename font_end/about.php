@@ -48,8 +48,8 @@
                             <i class="fa fa-truck"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>Free Shipping</h4>
-                            <p>on order over $100</p>
+                            <h4>Miễn phí vận chuyển</h4>
+                            <p>Sản phẩm trên 10tr</p>
                         </div>
                     </div>
                 </div>
@@ -62,8 +62,8 @@
                             <i class="fa fa-support"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>24/7 Support</h4>
-                            <p>Online consultations</p>
+                            <h4> Hỗ trọ 24/7</h4>
+                            <p>Tư vấn trực tuyến</p>
                         </div>
                     </div>
                 </div>
@@ -76,8 +76,8 @@
                             <i class="fa fa-calendar"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>Daily updates</h4>
-                            <p>Check out store</p>
+                            <h4>Cập nhật hàng ngày</h4>
+                            <p>Kiểm tra cửa hàng</p>
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,8 @@
                             <i class="fa fa-refresh"></i>
                         </div>
                         <div class="call-action-info">
-                            <h4>30-day Returns</h4>
-                            <p>oneyback guarantee</p>
+                            <h4>Hoàn trả trong vòng 15 ngày</h4>
+                            <p>Đảm bảo hoàn tiền</p>
                         </div>
                     </div>
                 </div>

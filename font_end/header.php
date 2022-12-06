@@ -10,7 +10,6 @@
     <meta name="description" content="meta description">
 
     <title>Tienda - Digital Products Store eCommerce Bootstrap 5 Template</title>
-
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="assets_fontend/img/favicon.ico" type="image/x-icon"/>
 
@@ -69,24 +68,8 @@
                 <div class="col-md-7 col-lg-6 mt-xs-10">
                     <div class="site-setting-menu">
                         <ul class="nav justify-content-center justify-content-md-end">
-                            <li><a href="index.php?act=myaccount">My Account</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
-                            <li><a href="index.php?act=login">Sign In</a></li>
-                            <li class="switcher dropdown-show"><a href="#" class="arrow-toggle">English</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="#">Bengali</a></li>
-                                    <li><a href="#">Chinese</a></li>
-                                    <li><a href="#">Hindi</a></li>
-                                    <li><a href="#">Urdu</a></li>
-                                </ul>
-                            </li>
-                            <li class="switcher dropdown-show"><a href="#" class="arrow-toggle">USD</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="#">BDT</a></li>
-                                    <li><a href="#">AUD</a></li>
-                                    <li><a href="#">CAD</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="index.php?act=myaccount">Tài khoản của tôi</a></li>
+                            <li><a href="index.php?act=login">Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -111,10 +94,12 @@
                 <!-- Search Box Area Start -->
                 <div class="col-8 col-md-7 col- m-auto ">
                     <div class="search-box-wrap">
-                        <form class="search-form d-flex" action="#" method="get">
-                            <input type="search" name="search" placeholder="type and hit enter"/>
-                            <button class="btn btn-search"><img src="assets_fontend/img/icons/icon-search.png"
-                                                                alt="Search Icon"/>
+                        <form class="search-form d-flex" action="index.php?act=load_sp" method="POST">
+                            <input type="text" name="search" placeholder="Gõ và nhấn enter" style="width: 609px; height: 61px;" />
+                            <!-- <button class="btn btn-search" name="tim" type="submit">
+                                <img src="assets_fontend/img/icons/icon-search.png"
+                                                                alt="Search Icon"/> -->
+                                <input type="submit" name="tim" value="Tìm kiếm" style="width: 100px; height: 61px; color: white; background-color: #2192FF;">
                             </button>
                         </form>
                     </div>
@@ -123,7 +108,16 @@
 
                 <!-- Mini Cart Area Start -->
                 <div class="col-12 col-md-3 col-xl-2 m-auto text-center text-lg-right mt-xs-15" style="width: 220px">
-                    <div class="minicart-wrapper" style="display: flex;">
+                <div style="width: 20px; height: 20px; background-color: #F5EBE0; color: black; position: absolute; z-index: 1; margin-left: 90px; border-radius: 50px;">
+                <?php 
+                    $tong = 0;
+                     foreach ($_SESSION['mua_cart'] as $key) {
+                        $tong += count($key) / 5;
+                     }
+                     echo $tong;
+                ?>
+                </div>
+                    <div class="minicart-wrapper" style="display: flex; position: relative;">
                         <a href="index.php?act=dohang"><button class="btn btn-minicart" style="margin-left: -30px; width: 140px; height: 70px;">Giỏ Hàng</button></a>
                         <a href="index.php?act=load_bill"><button class="btn btn-minicart" style="margin-left: 40px; width: 140px; height: 70px;">Đơn hàng</button></a>
                     </div>
@@ -139,149 +133,6 @@
         <div class="container">
             <div class="row">
                 <!-- Categories List Start -->
-                <div class="col-10 col-lg-3">
-                    <div class="categories-list-wrap">
-                        <button class="btn btn-category d-none d-lg-inline-block"><i class="fa fa-bars"></i> Categories
-                        </button>
-                        <ul class="category-list-menu">
-                            <li class="category-item-parent dropdown-show">
-                                <a href="#" class="category-item arrow-toggle">
-                                    <img src="assets_fontend/img/icons/desktop.png" alt="Computer"/>
-                                    <span>Computer</span>
-                                </a>
-                                <ul class="mega-menu-wrap dropdown-nav">
-                                    <li class="mega-menu-item"><a href="#" class="mega-item-title">Laptop</a>
-                                        <ul>
-                                            <li><a href="#">Has Laptop Price</a></li>
-                                            <li><a href="#">Has Laptop Ram</a></li>
-                                            <li><a href="#">Has Laptop Rom</a></li>
-                                            <li><a href="#">Has Laptop SSD</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mega-menu-item"><a href="#" class="mega-item-title">Desktop</a>
-                                        <ul>
-                                            <li><a href="#">Has Laptop Price</a></li>
-                                            <li><a href="#">Has Laptop Ram</a></li>
-                                            <li><a href="#">Has Laptop Rom</a></li>
-                                            <li><a href="#">Has Laptop SSD</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mega-menu-item"><a href="#" class="mega-item-title">Notebook</a>
-                                        <ul>
-                                            <li><a href="#">Has Laptop Price</a></li>
-                                            <li><a href="#">Has Laptop Ram</a></li>
-                                            <li><a href="#">Has Laptop Rom</a></li>
-                                            <li><a href="#">Has Laptop SSD</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="category-item-parent dropdown-show">
-                                <a href="#" class="category-item arrow-toggle">
-                                    <img src="assets_fontend/img/icons/mobile.png" alt="Mobile"/>
-                                    <span>Mobile</span>
-                                </a>
-                                <ul class="mega-menu-wrap dropdown-nav">
-                                    <li class="mega-menu-item"><a href="#" class="mega-item-title">Sumsang</a>
-                                        <ul>
-                                            <li><a href="#">Sumsang S6</a></li>
-                                            <li><a href="#">Sumsang S7</a></li>
-                                            <li><a href="#">Sumsang Prime</a></li>
-                                            <li><a href="#">Sumsang A6</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mega-menu-item"><a href="#" class="mega-item-title">Ziaomi</a>
-                                        <ul>
-                                            <li><a href="#">Ziaomi A2 Pro</a></li>
-                                            <li><a href="#">Ziaomi MIX 2</a></li>
-                                            <li><a href="#">Ziaomi F1</a></li>
-                                            <li><a href="#">Ziaomi Prime</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mega-menu-item"><a href="#" class="mega-item-title">Jamila</a>
-                                        <ul>
-                                            <li><a href="#">Jamila G100</a></li>
-                                            <li><a href="#">Jamila i120</a></li>
-                                            <li><a href="#">Jamila i15</a></li>
-                                            <li><a href="#">Jamila L62</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mega-menu-item"><a href="#" class="mega-item-title">Nakoa</a>
-                                        <ul>
-                                            <li><a href="#">Nakoa Lamia 820</a></li>
-                                            <li><a href="#">Nakoa 888 Pro</a></li>
-                                            <li><a href="#">Nakoa 81 Sirocco</a></li>
-                                            <li><a href="#">Nakoa Lamia 1520</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="category-item-parent">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/camera.png" alt="Camera"/>
-                                    <span>Camera</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/fan.png" alt="Camera"/>
-                                    <span>Electronics</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/games.png" alt="Camera"/>
-                                    <span>Gaming</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/tv.png" alt="Camera"/>
-                                    <span>Entertainment</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/desktop.png" alt="Computer"/>
-                                    <span>Computer</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent hidden">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/mobile.png" alt="Mobile"/>
-                                    <span>Mobile</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent hidden">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/camera.png" alt="Camera"/>
-                                    <span>Camera</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent hidden">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/fan.png" alt="Camera"/>
-                                    <span>Electronics</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent hidden">
-                                <a href="#" class="category-item">
-                                    <img src="assets_fontend/img/icons/games.png" alt="Camera"/>
-                                    <span>Gaming</span>
-                                </a>
-                            </li>
-                            <li class="category-item-parent">
-                                <a href="#" class="category-item btn-more">More Categories</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
                 <!-- Categories List End -->
 
                 <!-- Main Menu Start -->
@@ -290,20 +141,26 @@
                         <nav class="mainmenu">
                             <ul class="main-navbar clearfix">
                                 <li class="dropdown-show"><a href="index.php?act=go_home" class="arrow-toggle">Trang chủ</a>
-                                <li><a href="index.php?act=about">About Us</a></li>
+                                <li><a href="index.php?act=about">Về chúng tôi</a></li>
                                 <li class="dropdown-show"><a href="index.php?act=show_product" class="arrow-toggle">Sản phẩm</a>
                                     <ul class="mega-menu-wrap dropdown-nav">
-                                        <li class="mega-menu-item"><a href="shop.html" class="mega-item-title">
-                                            Shop PageLayout</a>
+                                        <li class="mega-menu-item"><a href="" class="mega-item-title">Danh mục</a>
                                             <ul>
-                                                <li><a href="shop.html">Shop Left Sidebar</a></li>
+                                                <?php 
+                                                    foreach ($danhmuc_all as $key) {
+                                                        extract($key);
+                                                        $link = "index.php?act=load_sp&id_danhmuc= ".$id_danhmuc;
+                                                        echo '
+                                                        <li><a href="'.$link.'">'.$name_danhmuc.'</a></li>
+                                                        ';
+                                                    }
+                                                ?>
                                             </ul>
                                         </li>
 
 
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Liên hệ</a></li>
                             </ul>
                         </nav>
                     </div>

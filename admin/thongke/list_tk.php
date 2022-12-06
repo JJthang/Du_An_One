@@ -6,7 +6,6 @@
             <div class="xuatsp" style="width: 100%; height: 800px;">
             <table style="width: 100%; height: 40%; text-align: center;">
                         <tr style="border-bottom: 1px solid #B2B2B2; background-color: #ced3d894;">
-                            <th></th>
                             <th>Mã danh mục</th>
                             <th>Tên danh mục</th>
                             <th>Số lượng</th>
@@ -20,13 +19,12 @@
                                 extract($key);
                                 echo '
                                 <tr style="border-bottom: 1px solid #B2B2B2;">
-                                <td><input type="checkbox" name="" id=""></td>
                                 <td> ' . $ma_dm.'</td>
                                 <td>' . $ten_dm .'</td>
                                 <td>' . $count_sp .'</td>
-                                <td>' . $min_price .'</td>
-                                <td>' . $max_price .'</td>
-                                <td>' . $avg_price .'</td>
+                                <td>' .  number_format($max_price) .'</td>
+                                <td>' . number_format($min_price) .'</td>
+                                <td>' . number_format($avg_price) .'</td>
                             </tr>
                                 ';
                             }
@@ -35,6 +33,7 @@
                     </table>
                     <div>
             <a href="index.php?act=bieudo"><input type="button" value="Biểu đồ" name="bieudo" style="color: #fff;background-color: #da542e;border-color: #da542e; border-radius: 2px; width: 80px; height: 35px; cursor: pointer; margin-top: 20px;"></a>
+            <a href="index.php?act=doanhthu"><input type="button" value="Doanh thu" name="bieudo" style="color: #fff;background-color: #da542e;border-color: #da542e; border-radius: 2px; width: 80px; height: 35px; cursor: pointer; margin-top: 20px; margin-left: 10px;"></a>
             </div>
             </div>
         </div>

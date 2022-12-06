@@ -12,10 +12,15 @@
         <form action="index.php?act=update_bill" method="post" enctype="multipart/form-data">
            <div class="Nhap_ten_sp">
             <label for="" >
-                Tình trạng sản phẩm :
+                Tình trạng đơn hàng :
             </label>
             <br>
-            <input type="text" class="import" name="status_bill" value="<?php echo $status_bill ?>">
+            <select name="status_bill" id="" style="margin-left: 80px;">
+                <option value="0">Đơn hàng mới</option>
+                <option value="1">Đang sử lý</option>
+                <option value="2">Đang giao hàng</option>
+                <option value="3">Giao thành công</option>
+                </select>
            </div>
            </div>
             <div class="chucnang">

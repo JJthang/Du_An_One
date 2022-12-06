@@ -59,11 +59,9 @@
                                     <i class="fa fa-star-o"></i>
                                 </div>
 
-                                <span class="price">$<?php echo $price_sp ?></span>
+                                <span class="price"><?php echo number_format($price_sp) ?>Đ</span>
 
                                 <div class="product-info-stock-sku">
-                                    <span class="product-stock-status text-success">In Stock</span>
-                                    <span class="product-sku-status"><strong>SKU</strong> MH03</span>
                                     <p style="padding-top: 10px;"><b>Bảo hàng : </b> 12 Tháng Chính hãng</p>
                                 </div>
 
@@ -77,7 +75,7 @@
                                                    <input type="hidden" name="price_sp" value="'.$price_sp.'">
                                                    <div class="product-quantity d-flex align-items-center">
 
-                                <input type="submit" value="Thêm vào dỏ hàng" name="add_to_cart" style="    background-color: #73b320;
+                                <input type="submit" value="Thêm vào giỏ hàng" name="add_to_cart" style="    background-color: #73b320;
                                     border: none;
                                     color: #fff;
                                     font-weight: 600;
@@ -92,14 +90,6 @@
                                 </form>
                                 ';
                                 ?>
-
-                                <div class="product-btn-group">
-                                    <a href="wishlist.html" class="btn btn-round btn-cart"><i
-                                            class="fa fa-heart"></i></a>
-                                    <a href="compare.html" class="btn btn-round btn-cart"><i class="fa fa-exchange"></i></a>
-                                    <a href="single-product-gruop.html" class="btn btn-round btn-cart"><i
-                                            class="fa fa-envelope-o"></i></a>
-                                </div>
                             </div>
                         </div>
                         <!-- Product Details End -->
@@ -111,8 +101,8 @@
                             <div class="product-full-info-reviews">
                                 <!-- Single Product tab Menu -->
                                 <nav class="nav" id="nav-tab">
-                                    <a class="active" id="description-tab" data-bs-toggle="tab" href="#description">Description</a>
-                                    <a id="reviews-tab" data-bs-toggle="tab" href="#reviews">Reviews</a>
+                                    <a class="active" id="description-tab" data-bs-toggle="tab" href="#description">Mô tả</a>
+                                    <a id="reviews-tab" data-bs-toggle="tab" href="#reviews">Bình luận</a>
                                 </nav>
                                 <!-- Single Product tab Menu -->
                                 <!-- Single Product tab Content -->

@@ -11,14 +11,14 @@
                     <!-- Single Widget-item Start -->
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-item">
-                            <h3 class="widget-title">About Market</h3>
+                            <h3 class="widget-title">Về thị trường</h3>
                             <div class="widget-body">
                                 <ul class="footer-list">
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Order History</a></li>
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Specials</a></li>
-                                    <li><a href="#">Site Map</a></li>
+                                    <li><a href="index.php?act=myaccount">Tài khoản của tôi</a></li>
+                                    <li><a href="index.php?act=load_bill">lịch sử đơn hàng</a></li>
+                                    <li><a href="#">trả lại</a></li>
+                                    <li><a href="#">đặc biệt</a></li>
+                                    <li><a href="#">Sơ đồ trang web</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -28,14 +28,14 @@
                     <!-- Single Widget-item Start -->
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-item">
-                            <h3 class="widget-title">Customer Service</h3>
+                            <h3 class="widget-title">Dịch vụ khách hàng</h3>
                             <div class="widget-body">
                                 <ul class="footer-list">
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Order History</a></li>
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Site Map</a></li>
-                                    <li><a href="#">Specials</a></li>
+                                    <li><a href="#">trả lại</a></li>
+                                    <li><a href="index.php?act=load_bill">lịch sử đơn hàng</a></li>
+                                    <li><a href="index.php?act=myaccount">Tài khoản của tôi</a></li>
+                                    <li><a href="#">Sơ đồ trang web</a></li>
+                                    <li><a href="#">đặc biệt</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -45,14 +45,14 @@
                     <!-- Single Widget-item Start -->
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-item">
-                            <h3 class="widget-title">Information</h3>
+                            <h3 class="widget-title">Thông tin</h3>
                             <div class="widget-body">
-                                <ul class="footer-list">
-                                    <li><a href="#">Order History</a></li>
-                                    <li><a href="#">Site Map</a></li>
-                                    <li><a href="#">Returns</a></li>
-                                    <li><a href="#">Specials</a></li>
-                                    <li><a href="#">My Account</a></li>
+                            <ul class="footer-list">
+                                    <li><a href="index.php?act=myaccount">Tài khoản của tôi</a></li>
+                                    <li><a href="#">trả lại</a></li>
+                                    <li><a href="index.php?act=load_bill">lịch sử đơn hàng</a></li>
+                                    <li><a href="#">Sơ đồ trang web</a></li>
+                                    <li><a href="#">đặc biệt</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                     <!-- Single Widget-item Start -->
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-widget-item">
-                            <h3 class="widget-title">Contact Us</h3>
+                            <h3 class="widget-title">Liên hệ</h3>
                             <div class="widget-body">
                                 <div class="contact-info">
                                     <div class="single-contact-info">
@@ -70,7 +70,7 @@
                                         <i class="fa fa-home"></i>
                                     </span>
                                         <a href="mailto:your@example.com" class="contact-text">
-                                            <strong>Address:</strong> Your Address goes here.
+                                            <strong>Địa chỉ:</strong> Đông Anh - Hà Nội.
                                         </a>
                                     </div>
                                     <div class="single-contact-info">
@@ -78,7 +78,7 @@
                                         <i class="fa fa-phone"></i>
                                     </span>
                                         <a href="mailto:your@example.com" class="contact-text">
-                                            <strong>Phone:</strong> (+1) 866-540-3229
+                                            <strong>Số Điện thoại:</strong> (+1) 866-540-3229
                                         </a>
                                     </div>
                                     <div class="single-contact-info">
@@ -86,7 +86,7 @@
                                         <i class="fa fa-envelope"></i>
                                     </span>
                                         <a href="mailto:your@example.com" class="contact-text">
-                                            <strong>Email:</strong> your@email.here
+                                            <strong>Email:</strong> thang@email.com
                                         </a>
                                     </div>
                                 </div>
@@ -101,26 +101,6 @@
     <!-- Footer Widget Area End -->
 
     <!-- Footer Bottom Area -->
-    <div class="footer-bttom-area">
-        <div class="container">
-            <div class="row">
-                <!-- Copyright Text Area -->
-                <div class="col-md-6 m-auto text-center text-md-left order-last order-md-first">
-                    <p>© <span class="copyright-year"></span>, Tienda. Made with <i class="fa fa-heart text-danger"></i>
-                        by <a href="https://hasthemes.com/" target="_blank">HasThemes.</a></p>
-                </div>
-                <!-- Copyright Text Area -->
-
-                <!-- Payment Method Area -->
-                <div class="col-md-6 m-auto text-center text-md-right">
-                    <div class="payment-support">
-                        <img src="assets_fontend/img/payment.png" alt="Payment" class="d-inline-block"/>
-                    </div>
-                </div>
-                <!-- Payment Method Area -->
-            </div>
-        </div>
-    </div>
     <!-- Footer Bottom Area -->
 </footer>
 <!--== End Footer Area ==-->

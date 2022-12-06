@@ -3,17 +3,10 @@
             <h1>Danh sách sản phẩm</h1>
         </div>
         <div class="khung_list_sp" style="width: 100%;height: 3000px;">
-            <div class="find_sp" style="width: 100%; height: 40px;">
-                    <form action="index.php?act=don_hang" method="post">
-                                <input type="text" name="kwn" class="find_product">
-                                    <input type="submit" name="list_find" value="FIND">
-                    </form>
-            </div>
 
             <div class="xuatsp" style="width: 100%; height: 800px;">
             <table  style="width: 100%; height: 50%; text-align: center;">
                         <tr style="border-bottom: 1px solid #B2B2B2; background-color: #ced3d894;">
-                            <th></th>
                             <th>MÃ ĐƠN HÀNG</th>
                             <th>TÊN KHÁCH HÀNG</th>
                             <th>SỐ LƯƠNG HÀNG</th>
@@ -32,11 +25,10 @@
                                 $status_product = get_ttdh($key["status_bill"]);
                                 echo '
                                 <tr style="border-bottom: 1px solid #B2B2B2;">
-                                <td><input type="checkbox" name="" id=""></td>
                                 <td> ' . $key["id_bill"].'</td>
                                 <td>' . $key["name_bill"] .'</td>
                                 <td>' . $slhang .'</td>
-                                <td>' . $key["tongtien_bill"] .'</td>
+                                <td>' .  number_format($key["tongtien_bill"]) .'</td>
                                 <td>' . $status_product .'</td>
                                 <td>' . $key["ngaydathang"] .'</td>                                
                                 <td>
